@@ -1,0 +1,309 @@
+@font-face {
+    font-family: PanchariUni;
+    src: url("https://css-mm.manoramaonline.com/etc.clientlibs/revamp-mmonline/clientlibs/clientlib-mmo-fonts/resources/fonts/PanchariUniN.woff2") format("woff2"),
+        url("https://css-mm.manoramaonline.com/etc.clientlibs/revamp-mmonline/clientlibs/clientlib-mmo-fonts/resources/fonts/PanchariUniN.woff") format("woff");
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: PanchariUni;
+    src: url("https://css-mm.manoramaonline.com/etc.clientlibs/revamp-mmonline/clientlibs/clientlib-mmo-fonts/resources/fonts/PanchariUniB.woff2") format("woff2"),
+        url("https://css-mm.manoramaonline.com/etc.clientlibs/revamp-mmonline/clientlibs/clientlib-mmo-fonts/resources/fonts/PanchariUniB.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: EGGIndulekhaUni;
+    src: url("https://css-mm.manoramaonline.com/etc.clientlibs/revamp-mmonline/clientlibs/clientlib-mmo-fonts/resources/fonts/EGGIndulekhaUniB.woff2") format("woff2"),
+        url("https://css-mm.manoramaonline.com/etc.clientlibs/revamp-mmonline/clientlibs/clientlib-mmo-fonts/resources/fonts/EGGIndulekhaUniB.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.panchari
+{
+    font-family: PanchariUni;
+}
+.indulekha
+{
+    font-family: EGGIndulekhaUni;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e60012;
+}
+
+.header .account {
+    display: flex;
+    align-items: center;
+}
+
+.header .account span {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.container1 {
+    margin: 50px auto;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.subtext {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+    max-width: 292px;
+    margin: auto;
+
+}
+
+.grid button {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    background: white;
+    cursor: pointer;
+}
+
+.grid button:hover {
+    background-color: #f0f0f0;
+}
+
+.clear-btn {
+    display: block;
+    margin: 10px auto;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.input-box {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #001e90;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newsletter {
+    margin-top: 50px;
+    background: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter .text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.newsletter .join-btn {
+    background: #001e90;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+ul.options {
+    padding: 0px;
+    display: flex;
+    margin: 0px;
+}
+
+ul.options li {
+    list-style-type: none;
+    list-style-type: none;
+    margin: 0px 10px;
+}
+
+.tile {
+    font-family: EGGIndulekhaUni, "Poppins", sans-serif;
+    font-size: 30px;
+}
+
+.active {
+    background-color: #001e90 !important;
+    color: white;
+}
+.deactive {
+    background-color: #fff !important;
+    color: #000;
+}
+.g-button
+{
+    background: #15278e;
+    color: #fff;
+    padding: 9px;
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+}
+.f-20
+{
+    font-size: 20px;
+}
+
+.success-box h2
+{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+.success-box {
+    position: relative;
+    background: #fff;
+
+    text-align: center;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #09b285;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+}
+
+/* Generate Multiple Confetti */
+.confetti:nth-child(1) { left: 10%; animation-duration: 3s; animation-delay: 0s; }
+.confetti:nth-child(2) { left: 30%; animation-duration: 2.5s; animation-delay: 0.2s; }
+.confetti:nth-child(3) { left: 50%; animation-duration: 3.2s; animation-delay: 0.4s; }
+.confetti:nth-child(4) { left: 70%; animation-duration: 2.8s; animation-delay: 0.6s; }
+.confetti:nth-child(5) { left: 90%; animation-duration: 3.5s; animation-delay: 0.8s; }
+.confetti:nth-child(6) { left: 20%; animation-duration: 3.1s; animation-delay: 1s; }
+.confetti:nth-child(7) { left: 40%; animation-duration: 2.6s; animation-delay: 1.2s; }
+.confetti:nth-child(8) { left: 60%; animation-duration: 3s; animation-delay: 1.4s; }
+.confetti:nth-child(9) { left: 80%; animation-duration: 2.9s; animation-delay: 1.6s; }
+.confetti:nth-child(10) { left: 50%; animation-duration: 3.3s; animation-delay: 1.8s; }
+
+
+@media screen and (max-width: 1200px) {
+    .container1 {
+        margin: 0px auto;
+        max-width: 500px;
+ 
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 9px;
+        margin-bottom: 15px;
+        max-width: 213px;
+        margin: auto;
+    }
+    .grid button {
+        width: 43px;
+        height: 43px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 30px;
+        font-weight: bold;
+        background: white;
+        cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .container1 {
+        margin: 0px auto;
+        max-width: 100%;
+ 
+    }
+    .question {
+        font-size: 27px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+  }
