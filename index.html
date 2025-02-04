@@ -31,6 +31,24 @@
                 <span>My Account ▼</span>
             </div>
         </div>
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end  modal-dialog-centered"> <!-- Aligns modal to the right -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5" id="helpModalLabel">How To Play?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start ">
+                <ol>
+                    <li>Click on the correct letters to form the answer.</li>
+                    <li>You can use the "Hint" button to reveal the first two letters.</li>
+                    <li>Press "Submit" when you are confident in your answer.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 
         <div class="container">
 
@@ -42,9 +60,12 @@
                 </div>
                 <div class="op">
                     <ul class="options">
-                        <li>
+                        <li data-bs-toggle="modal" data-bs-target="#helpModal">
                             How To Play ?
                         </li>
+
+
+
                         <li>
                            
                             <div class="dropdown">
