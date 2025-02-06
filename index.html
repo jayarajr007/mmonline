@@ -1,280 +1,262 @@
 <!DOCTYPE html>
 <html lang="ml">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Malayalam Word Puzzle</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
-        <link
-            href="Asset/css/style.css"
-            rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet">
-        <style>
-.wrong {
-    background-color: red !important;
-    color: white !important;
-}
-
-   </style>
-    </head>
-    <body class="poppins-regular ">
-
-        <div class="header">
-            <div class="logo">
-                <img src="Asset/img/logo.svg" alt="Manorama Online "
-                    class="d-none d-sm-block" width="250">
-                <img src="Asset/img/m-logo.png" alt="Manorama Online "
-                    class="d-block d-sm-none" width>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Malayalam Word Puzzle</title>
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin="anonymous">
+      <link
+         href="Asset/css/style.css"
+         rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+         rel="stylesheet">
+      <style>
+         .wrong {
+         background-color: red !important;
+         color: white !important;
+         }
+      </style>
+   </head>
+   <body class="poppins-regular ">
+      <div class="header">
+         <div class="logo">
+            <img src="Asset/img/logo.svg" alt="Manorama Online "
+               class="d-none d-sm-block" width="250">
+            <img src="Asset/img/m-logo.png" alt="Manorama Online "
+               class="d-block d-sm-none" width>
+         </div>
+         <div class="account">
+            <span>My Account ▼</span>
+         </div>
+      </div>
+      <!-- Help Modal -->
+      <div class="modal fade" id="helpModal" tabindex="-1"
+         aria-labelledby="helpModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-end  modal-dialog-centered">
+            <!-- Aligns modal to the right -->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title fs-5" id="helpModalLabel">How To
+                     Play?
+                  </h5>
+                  <button type="button" class="btn-close"
+                     data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body text-start ">
+                  <ol>
+                     <li>Click on the correct letters to form the
+                        answer.
+                     </li>
+                     <li>You can use the "Hint" button to reveal the
+                        first two letters.
+                     </li>
+                     <li>Press "Submit" when you are confident in your
+                        answer.
+                     </li>
+                  </ol>
+               </div>
             </div>
-            <div class="account">
-                <span>My Account ▼</span>
+         </div>
+      </div>
+      <div class="container">
+         <div class="d-flex justify-content-between mt-4 align-item-center
+            ">
+            <div class="tile">
+               അക്ഷരമാല
             </div>
-        </div>
-        <!-- Help Modal -->
-        <div class="modal fade" id="helpModal" tabindex="-1"
-            aria-labelledby="helpModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-end  modal-dialog-centered">
-                <!-- Aligns modal to the right -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title fs-5" id="helpModalLabel">How To
-                            Play?</h5>
-                        <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-start ">
-                        <ol>
-                            <li>Click on the correct letters to form the
-                                answer.</li>
-                            <li>You can use the "Hint" button to reveal the
-                                first two letters.</li>
-                            <li>Press "Submit" when you are confident in your
-                                answer.</li>
-                        </ol>
-                    </div>
-                </div>
+            <div class="op">
+               <ul class="options">
+                  <li data-bs-toggle="modal" data-bs-target="#helpModal">
+                     How To Play ?
+                  </li>
+                  <li>
+                     <div class="dropdown">
+                        <svg width="26" height="27" viewBox="0 0 26 27"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                           class=" dropdown-toggle" type="button"
+                           id="dropdownMenuButton"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                           <path
+                              d="M1.91875 0.000176946C1.62071 -0.00379156 1.32114 0.105475 1.09046 0.329441C0.619543 0.786774 0.618591 1.54215 1.08826 2.00083L2.84851 3.75994C3.30719 4.22953 4.06256 4.22856 4.5199 3.75774C4.96778 3.29638 4.95826 2.55962 4.49829 2.11028L2.73804 0.351165C2.51336 0.121119 2.21679 0.00410136 1.91875 0.000176946ZM23.7482 0.000176946C23.4501 0.00414545 23.1537 0.12104 22.929 0.35109L21.1687 2.1102C20.7087 2.55954 20.6992 3.2963 21.1471 3.75766C21.6045 4.22856 22.3598 4.22953 22.8185 3.75987L24.5788 2.00075C25.0484 1.54207 25.0474 0.786699 24.5766 0.329367C24.3459 0.105391 24.0462 -0.00374526 23.7482 0.000176946ZM12.8494 2.681C9.25077 2.681 6.31312 5.6301 6.31312 9.23439C6.31312 11.1017 7.19312 12.7128 8.44935 13.9068V16.771C8.44935 17.9921 9.4694 19.0143 10.6927 19.0143H14.9902C16.2135 19.0143 17.229 17.9921 17.229 16.771V13.9284C18.5 12.7331 19.3869 11.1142 19.3869 9.23439C19.3869 7.43203 18.6562 5.78691 17.4751 4.6019C16.294 3.4169 14.6489 2.681 12.8494 2.681ZM12.8494 5.01434C14.0159 5.01434 15.0581 5.48534 15.8208 6.2505C16.5834 7.01567 17.0524 8.06089 17.0524 9.23439C17.0524 10.6259 16.388 11.843 15.3605 12.6148C15.2157 12.7238 15.0982 12.8652 15.0175 13.0275C14.9369 13.1899 14.8951 13.3688 14.8956 13.5501V16.6799H10.7827V13.5319C10.7829 13.3519 10.7414 13.1744 10.6615 13.0131C10.5817 12.8518 10.4656 12.7112 10.3224 12.6022C9.30419 11.8297 8.64759 10.6184 8.64759 9.23439C8.64759 6.88697 10.516 5.01434 12.8494 5.01434ZM1.18047 8.70461C0.537353 8.69689 0.00961051 9.2112 0.000130196 9.85418C-0.00957059 10.5106 0.524081 11.0457 1.18047 11.0379H3.66875C4.32513 11.0457 4.85857 10.5105 4.84909 9.85418C4.83961 9.21125 4.31176 8.69707 3.66875 8.70461H1.18047ZM21.9982 8.70461C21.3551 8.69689 20.8273 9.2112 20.8178 9.85418C20.8081 10.5106 21.3418 11.0457 21.9982 11.0379H24.4865C25.1428 11.0457 25.6763 10.5105 25.6668 9.85418C25.6573 9.21125 25.1295 8.69707 24.4865 8.70461H21.9982ZM3.6847 15.6693C3.38129 15.6688 3.07778 15.7854 2.84844 16.0202L1.08818 17.7805C0.618591 18.2391 0.619543 18.9945 1.09039 19.4518C1.55175 19.8998 2.2885 19.8903 2.73785 19.4302L4.4981 17.6711C4.95811 17.2218 4.96763 16.485 4.51971 16.0237C4.29104 15.7882 3.98811 15.6697 3.6847 15.6693ZM21.9993 15.6693C21.7013 15.6653 21.4028 15.7746 21.1722 15.9985C20.7013 16.4559 20.6992 17.2124 21.1686 17.6711L22.9289 19.4302C23.3876 19.8998 24.1429 19.8988 24.6003 19.428C25.0482 18.9666 25.0386 18.2299 24.5787 17.7805L22.8196 16.0214C22.5949 15.7913 22.2974 15.6732 21.9993 15.6693ZM10.3623 20.1833C9.71927 20.1758 9.19141 20.6899 9.18193 21.3329C9.17223 21.9892 9.70589 22.5243 10.3623 22.5166H15.3388C15.9952 22.5243 16.5288 21.9892 16.5192 21.3329C16.5097 20.6899 15.9818 20.1757 15.3388 20.1833H10.3623ZM11.6064 23.6844C10.9633 23.6767 10.4356 24.191 10.4261 24.834C10.4164 25.4904 10.95 26.0255 11.6064 26.0178H14.0947C14.7511 26.0255 15.2845 25.4904 15.275 24.834C15.2656 24.1911 14.7377 23.6769 14.0947 23.6844H11.6064Z"
+                              fill="#464646" />
+                        </svg>
+                        <ul class="dropdown-menu"
+                           aria-labelledby="dropdownMenuButton">
+                           <!-- <li><a class="dropdown-item" href="#"
+                              id="hint-btn">Hint</a></li> -->
+                           <li><a class="dropdown-item" href="#"
+                              id="reveal-btn">Reveal</a></li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
             </div>
-        </div>
-
-        <div class="container">
-
-            <div class="d-flex justify-content-between mt-4
-    ">
-
-                <div class="tile">
-                    അക്ഷരമാല
-                </div>
-                <div class="op">
-                    <ul class="options">
-                        <li data-bs-toggle="modal" data-bs-target="#helpModal">
-                            How To Play ?
-                        </li>
-
-                        <li>
-
-                            <div class="dropdown">
-
-                                <svg width="26" height="27" viewBox="0 0 26 27"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class=" dropdown-toggle" type="button"
-                                    id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <path
-                                        d="M1.91875 0.000176946C1.62071 -0.00379156 1.32114 0.105475 1.09046 0.329441C0.619543 0.786774 0.618591 1.54215 1.08826 2.00083L2.84851 3.75994C3.30719 4.22953 4.06256 4.22856 4.5199 3.75774C4.96778 3.29638 4.95826 2.55962 4.49829 2.11028L2.73804 0.351165C2.51336 0.121119 2.21679 0.00410136 1.91875 0.000176946ZM23.7482 0.000176946C23.4501 0.00414545 23.1537 0.12104 22.929 0.35109L21.1687 2.1102C20.7087 2.55954 20.6992 3.2963 21.1471 3.75766C21.6045 4.22856 22.3598 4.22953 22.8185 3.75987L24.5788 2.00075C25.0484 1.54207 25.0474 0.786699 24.5766 0.329367C24.3459 0.105391 24.0462 -0.00374526 23.7482 0.000176946ZM12.8494 2.681C9.25077 2.681 6.31312 5.6301 6.31312 9.23439C6.31312 11.1017 7.19312 12.7128 8.44935 13.9068V16.771C8.44935 17.9921 9.4694 19.0143 10.6927 19.0143H14.9902C16.2135 19.0143 17.229 17.9921 17.229 16.771V13.9284C18.5 12.7331 19.3869 11.1142 19.3869 9.23439C19.3869 7.43203 18.6562 5.78691 17.4751 4.6019C16.294 3.4169 14.6489 2.681 12.8494 2.681ZM12.8494 5.01434C14.0159 5.01434 15.0581 5.48534 15.8208 6.2505C16.5834 7.01567 17.0524 8.06089 17.0524 9.23439C17.0524 10.6259 16.388 11.843 15.3605 12.6148C15.2157 12.7238 15.0982 12.8652 15.0175 13.0275C14.9369 13.1899 14.8951 13.3688 14.8956 13.5501V16.6799H10.7827V13.5319C10.7829 13.3519 10.7414 13.1744 10.6615 13.0131C10.5817 12.8518 10.4656 12.7112 10.3224 12.6022C9.30419 11.8297 8.64759 10.6184 8.64759 9.23439C8.64759 6.88697 10.516 5.01434 12.8494 5.01434ZM1.18047 8.70461C0.537353 8.69689 0.00961051 9.2112 0.000130196 9.85418C-0.00957059 10.5106 0.524081 11.0457 1.18047 11.0379H3.66875C4.32513 11.0457 4.85857 10.5105 4.84909 9.85418C4.83961 9.21125 4.31176 8.69707 3.66875 8.70461H1.18047ZM21.9982 8.70461C21.3551 8.69689 20.8273 9.2112 20.8178 9.85418C20.8081 10.5106 21.3418 11.0457 21.9982 11.0379H24.4865C25.1428 11.0457 25.6763 10.5105 25.6668 9.85418C25.6573 9.21125 25.1295 8.69707 24.4865 8.70461H21.9982ZM3.6847 15.6693C3.38129 15.6688 3.07778 15.7854 2.84844 16.0202L1.08818 17.7805C0.618591 18.2391 0.619543 18.9945 1.09039 19.4518C1.55175 19.8998 2.2885 19.8903 2.73785 19.4302L4.4981 17.6711C4.95811 17.2218 4.96763 16.485 4.51971 16.0237C4.29104 15.7882 3.98811 15.6697 3.6847 15.6693ZM21.9993 15.6693C21.7013 15.6653 21.4028 15.7746 21.1722 15.9985C20.7013 16.4559 20.6992 17.2124 21.1686 17.6711L22.9289 19.4302C23.3876 19.8998 24.1429 19.8988 24.6003 19.428C25.0482 18.9666 25.0386 18.2299 24.5787 17.7805L22.8196 16.0214C22.5949 15.7913 22.2974 15.6732 21.9993 15.6693ZM10.3623 20.1833C9.71927 20.1758 9.19141 20.6899 9.18193 21.3329C9.17223 21.9892 9.70589 22.5243 10.3623 22.5166H15.3388C15.9952 22.5243 16.5288 21.9892 16.5192 21.3329C16.5097 20.6899 15.9818 20.1757 15.3388 20.1833H10.3623ZM11.6064 23.6844C10.9633 23.6767 10.4356 24.191 10.4261 24.834C10.4164 25.4904 10.95 26.0255 11.6064 26.0178H14.0947C14.7511 26.0255 15.2845 25.4904 15.275 24.834C15.2656 24.1911 14.7377 23.6769 14.0947 23.6844H11.6064Z"
-                                        fill="#464646" />
-                                </svg>
-
-                                <ul class="dropdown-menu"
-                                    aria-labelledby="dropdownMenuButton">
-                                    <!-- <li><a class="dropdown-item" href="#"
-                                            id="hint-btn">Hint</a></li> -->
-                                    <li><a class="dropdown-item" href="#"
-                                            id="reveal-btn">Reveal</a></li>
-
-                                </ul>
-                            </div>
-
-                        </li>
-
-                    </ul>
-                </div>
+         </div>
+      </div>
+      <div class="container1">
+         <div class="success-box">
+            <div class="confetti-container">
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
+               <div class="confetti"></div>
             </div>
-        </div>
-
-        <div class="container1">
-
-            <div class="success-box">
-                <div class="confetti-container">
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                </div>
-                <h2 class="mt-2">Congratulations!</h2>
-                <p>You got today's question correct!</p>
-                <svg width="131" height="131" viewBox="0 0 131 131" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M123.291 78.0881C120.716 74.0828 118.141 70.2205 115.566 66.2153C114.994 65.357 114.994 64.7848 115.566 63.9265C118.141 60.0643 120.573 56.202 123.147 52.3398C126.151 47.7623 124.578 43.3279 119.428 41.4683C115.137 39.8948 110.846 38.1782 106.554 36.6047C105.696 36.3186 105.267 35.7464 105.267 34.7451C105.124 30.0246 104.838 25.3041 104.552 20.7266C104.265 15.72 100.403 12.8591 95.5396 14.1465C90.9622 15.2909 86.3847 16.5783 81.9503 17.8657C80.9489 18.1518 80.3767 17.8657 79.6615 17.1505C76.8006 13.4313 73.7966 9.85512 70.9357 6.27897C67.7887 2.27368 62.9251 2.27368 59.6351 6.27897C56.7742 9.85512 53.7702 13.4313 51.0523 17.0074C50.3371 18.0087 49.6219 18.1518 48.4775 17.8657C44.0431 16.5783 39.6086 15.4339 36.4616 14.5756C30.3107 13.1452 26.5915 15.577 26.3054 20.7266C26.0193 25.4471 25.7332 30.1677 25.5901 35.0312C25.5901 36.0325 25.161 36.4617 24.3027 36.8908C19.8683 38.6074 15.4339 40.3239 10.9995 42.0405C6.42199 43.9001 4.99153 48.3345 7.7094 52.4828C10.2842 56.4881 12.8591 60.3504 15.4339 64.3556C16.006 65.2139 16.006 65.7861 15.4339 66.7874C12.716 70.7927 10.1412 74.798 7.56634 78.9463C5.13457 82.8086 6.70806 87.386 10.9994 89.1026C15.4339 90.8192 20.0113 92.5357 24.4457 94.2523C25.4471 94.5384 25.7332 95.1106 25.7332 96.1119C25.8762 100.689 26.4484 105.124 26.4484 109.701C26.4484 114.279 30.4537 118.427 36.0325 116.71C40.4669 115.28 44.9013 114.279 49.3357 112.991C50.194 112.705 50.7662 112.848 51.3384 113.706C54.3423 117.426 57.2033 121.002 60.2072 124.721C63.4973 128.726 68.2178 128.726 71.3648 124.721C74.3688 121.002 77.2297 117.426 80.2337 113.706C80.8058 112.991 81.235 112.705 82.2363 112.991C86.8138 114.279 91.3912 115.423 95.9687 116.71C100.689 117.998 104.695 115.137 104.838 110.273C105.124 105.553 105.41 100.832 105.553 95.9688C105.553 94.8244 106.125 94.3953 106.983 94.1092C111.275 92.5357 115.709 90.8192 120 89.1026C124.578 86.8139 126.008 82.2364 123.291 78.0881ZM89.1026 54.6285L60.4934 83.2377C59.7781 83.9529 58.7768 84.5251 57.7755 84.6682C57.4894 84.6682 57.0603 84.8112 56.7742 84.8112C55.4868 84.8112 54.0563 84.2391 53.055 83.2377L41.3252 71.5079C39.3226 69.5053 39.3226 66.2152 41.3252 64.2126C43.3279 62.2099 46.6179 62.2099 48.6206 64.2126L56.6311 72.2232L81.5211 47.3332C83.5238 45.3305 86.8138 45.3305 88.8165 47.3332C91.1052 49.3358 91.1052 52.6259 89.1026 54.6285Z"
-                        fill="#09B285" />
-                </svg>
-
-                <p class="answer my-5">കേരളത്തിന്റെ സംസ്ഥാനം ഏത്?<br> <strong
-                        class="f-20">തിരുവനന്തപുരം</strong></p>
-                <p>See you tomorrow for the next game!</p>
-                <button class="home-btn g-button">Go to Home</button>
+            <h2 class="mt-2">Congratulations!</h2>
+            <p>You got today's question correct!</p>
+            <svg width="131" height="131" viewBox="0 0 131 131" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M123.291 78.0881C120.716 74.0828 118.141 70.2205 115.566 66.2153C114.994 65.357 114.994 64.7848 115.566 63.9265C118.141 60.0643 120.573 56.202 123.147 52.3398C126.151 47.7623 124.578 43.3279 119.428 41.4683C115.137 39.8948 110.846 38.1782 106.554 36.6047C105.696 36.3186 105.267 35.7464 105.267 34.7451C105.124 30.0246 104.838 25.3041 104.552 20.7266C104.265 15.72 100.403 12.8591 95.5396 14.1465C90.9622 15.2909 86.3847 16.5783 81.9503 17.8657C80.9489 18.1518 80.3767 17.8657 79.6615 17.1505C76.8006 13.4313 73.7966 9.85512 70.9357 6.27897C67.7887 2.27368 62.9251 2.27368 59.6351 6.27897C56.7742 9.85512 53.7702 13.4313 51.0523 17.0074C50.3371 18.0087 49.6219 18.1518 48.4775 17.8657C44.0431 16.5783 39.6086 15.4339 36.4616 14.5756C30.3107 13.1452 26.5915 15.577 26.3054 20.7266C26.0193 25.4471 25.7332 30.1677 25.5901 35.0312C25.5901 36.0325 25.161 36.4617 24.3027 36.8908C19.8683 38.6074 15.4339 40.3239 10.9995 42.0405C6.42199 43.9001 4.99153 48.3345 7.7094 52.4828C10.2842 56.4881 12.8591 60.3504 15.4339 64.3556C16.006 65.2139 16.006 65.7861 15.4339 66.7874C12.716 70.7927 10.1412 74.798 7.56634 78.9463C5.13457 82.8086 6.70806 87.386 10.9994 89.1026C15.4339 90.8192 20.0113 92.5357 24.4457 94.2523C25.4471 94.5384 25.7332 95.1106 25.7332 96.1119C25.8762 100.689 26.4484 105.124 26.4484 109.701C26.4484 114.279 30.4537 118.427 36.0325 116.71C40.4669 115.28 44.9013 114.279 49.3357 112.991C50.194 112.705 50.7662 112.848 51.3384 113.706C54.3423 117.426 57.2033 121.002 60.2072 124.721C63.4973 128.726 68.2178 128.726 71.3648 124.721C74.3688 121.002 77.2297 117.426 80.2337 113.706C80.8058 112.991 81.235 112.705 82.2363 112.991C86.8138 114.279 91.3912 115.423 95.9687 116.71C100.689 117.998 104.695 115.137 104.838 110.273C105.124 105.553 105.41 100.832 105.553 95.9688C105.553 94.8244 106.125 94.3953 106.983 94.1092C111.275 92.5357 115.709 90.8192 120 89.1026C124.578 86.8139 126.008 82.2364 123.291 78.0881ZM89.1026 54.6285L60.4934 83.2377C59.7781 83.9529 58.7768 84.5251 57.7755 84.6682C57.4894 84.6682 57.0603 84.8112 56.7742 84.8112C55.4868 84.8112 54.0563 84.2391 53.055 83.2377L41.3252 71.5079C39.3226 69.5053 39.3226 66.2152 41.3252 64.2126C43.3279 62.2099 46.6179 62.2099 48.6206 64.2126L56.6311 72.2232L81.5211 47.3332C83.5238 45.3305 86.8138 45.3305 88.8165 47.3332C91.1052 49.3358 91.1052 52.6259 89.1026 54.6285Z"
+                  fill="#09B285" />
+            </svg>
+            <p class="answer my-5">കേരളത്തിന്റെ സംസ്ഥാനം ഏത്?<br> <strong
+               class="f-20">തിരുവനന്തപുരം</strong></p>
+            <p>See you tomorrow for the next game!</p>
+            <button class="home-btn g-button">Go to Home</button>
+         </div>
+         <div class="question-box">
+            <div class="question panchari ">കേരളത്തിന്റെ സംസ്ഥാനo ഏത്?</div>
+            <div class="subtext">Click on the letters below to form your
+               answer
             </div>
-
-            <div class="question-box">
-
-                <div class="question panchari ">കേരളത്തിന്റെ സംസ്ഥാനo ഏത്?</div>
-                <div class="subtext">Click on the letters below to form your
-                    answer</div>
-
-                <div class="grid panchari">
-                    <button>ര</button>
-                    <button>പു</button>
-                    <button>തി</button>
-                    <button>ശ</button>
-                    <button>രു</button>
-                    <button>വ</button>
-                    <button>ന</button>
-                    <button>മ</button>
-                    <button>മ</button>
-                    <button>പ</button>
-                    <button>റം</button>
-                    <button>രം</button>
-                    <button>അ</button>
-                    <button>ന്ത</button>
-                    <button>സ</button>
-                    <button>ള</button>
-                </div>
-
-                <button class="clear-btn">Clear</button>
-                <input type="text" class="input-box" readonly>
-                <button class="submit-btn">Submit</button>
-
+            <div class="grid panchari">
+               <button>ര</button>
+               <button>പു</button>
+               <button>തി</button>
+               <button>ശ</button>
+               <button>രു</button>
+               <button>വ</button>
+               <button>ന</button>
+               <button>മ</button>
+               <button>മ</button>
+               <button>പ</button>
+               <button>റം</button>
+               <button>രം</button>
+               <button>അ</button>
+               <button>ന്ത</button>
+               <button>സ</button>
+               <button>ള</button>
             </div>
-        </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-            crossorigin="anonymous"></script>
-
-        <script>
-   
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".grid button");
-    const inputBox = document.querySelector(".input-box");
-    const clearButton = document.querySelector(".clear-btn");
-    const submitButton = document.querySelector(".submit-btn");
-    const successBox = document.querySelector(".success-box");
-    const questionBox = document.querySelector(".question-box");
-    const successSound = new Audio("Asset/audio/success.mp3"); // Success sound
-    const errorSound = new Audio("Asset/audio/wrong.mp3"); 
-    const clearSound = new Audio("Asset/audio/swipe.mp3");// Error sound
-    const clickSound = new Audio("Asset/audio/click.wav"); // Click sound
-    const correctAnswer = "തിരുവനന്തപുരം"; // Correct answer
-    const messageDiv = document.createElement("p"); // Message display
-    messageDiv.className = "message-box";
-    document.querySelector(".container1").appendChild(messageDiv);
-
-    // Initially hide success box
-    successBox.style.display = "none";
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            clickSound.currentTime = 0; // Reset sound to avoid delay
-            clickSound.play(); // Play click sound
-
-            if (this.classList.contains("active")) {
-                this.classList.remove("active");
-                this.classList.remove("wrong"); // Remove wrong class if exists
-                this.style.backgroundColor = ""; // Reset background
-                this.style.color = ""; // Reset text color
-
-                // Remove only one occurrence of the clicked letter
-                let textArray = inputBox.value.split("");
-                let index = textArray.indexOf(this.textContent);
-                if (index > -1) {
-                    textArray.splice(index, 1); // Remove only one occurrence
-                }
-                inputBox.value = textArray.join(""); // Convert array back to string
-            } else {
-                this.classList.add("active");
-                inputBox.value += this.textContent; // Add clicked letter
-            }
-        });
-    });
-
-    clearButton.addEventListener("click", function () {
-        resetGame();
-        clearSound.play();
-    });
-
-    submitButton.addEventListener("click", function () {
-        if (inputBox.value === correctAnswer) {
-            messageDiv.textContent = "✅ Correct!";
-            messageDiv.style.color = "green";
-            successSound.currentTime = 0;
-            successSound.play();
-
-            // Hide question box and show success box
-            questionBox.style.display = "none";
-            successBox.style.display = "block";
-        } else {
-            messageDiv.textContent = "❌ Try Again!";
-            messageDiv.style.color = "red";
-            errorSound.currentTime = 0;
-            errorSound.play();
-            highlightIncorrectSelection(); // Highlight incorrect letters
-        }
-    });
-
-    function highlightIncorrectSelection() {
-        // Add red color class to selected buttons
-        buttons.forEach(button => {
-            if (button.classList.contains("active")) {
-                button.classList.add("wrong"); // Add CSS class for red color
-            }
-        });
-
-        // Reset after 1.5 seconds
-        setTimeout(resetGame, 1500);
-    }
-
-    function resetGame() {
-        inputBox.value = "";
-        messageDiv.textContent = "";
-        buttons.forEach(button => {
-            button.classList.remove("active", "wrong"); // Remove active & wrong class
-        });
-    }
-});
-
-
-
-</script>
-
-    </body>
+            <button class="clear-btn">Clear</button>
+            <input type="text" class="input-box" readonly>
+            <button class="submit-btn">Submit</button>
+         </div>
+      </div>
+      <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+         crossorigin="anonymous"></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+         crossorigin="anonymous"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+             const buttons = document.querySelectorAll(".grid button");
+             const inputBox = document.querySelector(".input-box");
+             const clearButton = document.querySelector(".clear-btn");
+             const submitButton = document.querySelector(".submit-btn");
+             const successBox = document.querySelector(".success-box");
+             const questionBox = document.querySelector(".question-box");
+             const successSound = new Audio("Asset/audio/success.mp3"); // Success sound
+             const errorSound = new Audio("Asset/audio/wrong.mp3"); 
+             const clearSound = new Audio("Asset/audio/swipe.mp3");// Error sound
+             const clickSound = new Audio("Asset/audio/click.wav"); // Click sound
+             const correctAnswer = "തിരുവനന്തപുരം"; // Correct answer
+             const messageDiv = document.createElement("p"); // Message display
+             messageDiv.className = "message-box";
+             document.querySelector(".container1").appendChild(messageDiv);
+         
+             // Initially hide success box
+             successBox.style.display = "none";
+         
+             buttons.forEach(button => {
+                 button.addEventListener("click", function () {
+                     clickSound.currentTime = 0; // Reset sound to avoid delay
+                     clickSound.play(); // Play click sound
+         
+                     if (this.classList.contains("active")) {
+                         this.classList.remove("active");
+                         this.classList.remove("wrong"); // Remove wrong class if exists
+                         this.style.backgroundColor = ""; // Reset background
+                         this.style.color = ""; // Reset text color
+         
+                         // Remove only one occurrence of the clicked letter
+                         let textArray = inputBox.value.split("");
+                         let index = textArray.indexOf(this.textContent);
+                         if (index > -1) {
+                             textArray.splice(index, 1); // Remove only one occurrence
+                         }
+                         inputBox.value = textArray.join(""); // Convert array back to string
+                     } else {
+                         this.classList.add("active");
+                         inputBox.value += this.textContent; // Add clicked letter
+                     }
+                 });
+             });
+         
+             clearButton.addEventListener("click", function () {
+                 resetGame();
+                 clearSound.play();
+             });
+         
+             submitButton.addEventListener("click", function () {
+                 if (inputBox.value === correctAnswer) {
+                     messageDiv.textContent = "✅ Correct!";
+                     messageDiv.style.color = "green";
+                     successSound.currentTime = 0;
+                     successSound.play();
+         
+                     // Hide question box and show success box
+                     questionBox.style.display = "none";
+                     successBox.style.display = "block";
+                 } else {
+                     messageDiv.textContent = "❌ Try Again!";
+                     messageDiv.style.color = "red";
+                     errorSound.currentTime = 0;
+                     errorSound.play();
+                     highlightIncorrectSelection(); // Highlight incorrect letters
+                 }
+             });
+         
+             function highlightIncorrectSelection() {
+                 // Add red color class to selected buttons
+                 buttons.forEach(button => {
+                     if (button.classList.contains("active")) {
+                         button.classList.add("wrong"); // Add CSS class for red color
+                     }
+                 });
+         
+                 // Reset after 1.5 seconds
+                 setTimeout(resetGame, 1500);
+             }
+         
+             function resetGame() {
+                 inputBox.value = "";
+                 messageDiv.textContent = "";
+                 buttons.forEach(button => {
+                     button.classList.remove("active", "wrong"); // Remove active & wrong class
+                 });
+             }
+         });
+         
+         
+         
+      </script>
+   </body>
 </html>
