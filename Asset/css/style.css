@@ -115,6 +115,7 @@ body {
     font-weight: bold;
     background: white;
     cursor: pointer;
+    color: #292929;
 }
 
 .grid button:hover {
@@ -140,6 +141,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .submit-btn {
@@ -196,7 +198,7 @@ ul.options li {
 
 .active {
     background-color: #001e90 !important;
-    color: white;
+    color: white !important;
 }
 .deactive {
     background-color: #fff !important;
@@ -234,6 +236,11 @@ ul.options li {
     overflow: hidden;
 }
 
+
+.message-box
+{
+    margin-top: 10px;
+}
 /* Confetti Animation */
 .confetti {
     position: absolute;
