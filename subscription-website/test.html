@@ -22,10 +22,20 @@
 
         <link rel="preload" as="image" href="assets/img/magazin/karshakasree.webp">
         <link rel="preload" as="image" href="assets/img/magazin/manorama-y.webp">
-        <link rel="preload" as="image" href="assets/img/magazin/manorama.webp">
-        <link rel="preload" as="image" href="assets/img/books/avatharam.webp">
+   <style>
 
-   
+.slider {
+    min-height: 400px !important; /* Reserve enough space */
+}
+
+.slider div {
+    min-height: 400px !important; /* Ensures each slide has a fixed height */
+}
+
+img {
+    background: #f3f3f3; /* Light gray placeholder */
+}
+   </style>
     </head>
     <body >
 
@@ -41,7 +51,7 @@
             <!-- Item 1 -->
             <div class="px-2 pb-2">
                 <div class="bg-white p-2 border rounded-lg" >
-                    <img src="assets/img/magazin/karshakasree.webp" width="300" height="380" alt="Magazine 1" class=" rounded-md pr"  style="aspect-ratio: 300 / 380;">
+                    <img src="assets/img/magazin/karshakasree.webp" width="300" height="380">
                     <p class="text-sm text-gray-500 mt-2">1hr ago</p>
                     <a href="#" class="text-green-600 font-semibold text-sm">Start Reading</a>
                 </div>
@@ -49,7 +59,7 @@
             <!-- Item 2 -->
             <div class="px-2 pb-2">
                 <div class="bg-white p-2 border rounded-lg">
-                    <img src="assets/img/magazin/manorama-y.webp" alt="Magazine 2" class=" rounded-md pr" width="300" height="380" style="aspect-ratio: 300 / 380;">
+                    <img src="assets/img/magazin/karshakasree.webp" width="300" height="380">
                     <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                     <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                 </div>
@@ -57,7 +67,7 @@
             <!-- Item 3 -->
             <div class="px-2 pb-2">
                 <div class="bg-white p-2 border rounded-lg">
-                    <img src="assets/img/magazin/manorama.webp" alt="Magazine 3" class=" rounded-md pr" width="300" height="380" style="aspect-ratio: 300 / 380;">
+                    <img src="assets/img/magazin/karshakasree.webp" width="300" height="380">
                     <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                     <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                 </div>
@@ -65,7 +75,7 @@
        
             <div class="px-2 pb-2">
                 <div class="bg-white p-2 border rounded-lg">
-                    <img src="assets/img/books/avatharam.webp" alt="Magazine 5" class=" rounded-md pr" width="300" height="380" style="aspect-ratio: 300 / 380;">
+                    <img src="assets/img/magazin/karshakasree.webp" width="300" height="380">
                     <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                     <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                 </div>
@@ -73,7 +83,7 @@
             <!-- Item 5 -->
             <div class="px-2 pb-2">
                 <div class="bg-white p-2 border rounded-lg">
-                    <img src="assets/img/books/avatharam.webp" alt="Magazine 5" class=" rounded-md pr" width="300" height="380" style="aspect-ratio: 300 / 380;">
+                    <img src="assets/img/magazin/karshakasree.webp" width="300" height="380">
                     <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                     <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                 </div>
@@ -156,6 +166,9 @@
             infinite: true,
             autoplay: true,
             autoplaySpeed: 3000,
+            adaptiveHeight: false, /* Avoid height recalculations */
+    fade: false, /* Prevent sudden content shifts */
+    autoplay: false,
             responsive: [
                 {
                     breakpoint: 1024, // Medium screens
