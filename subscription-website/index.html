@@ -5,15 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flowbite Starter</title>
 
-        <link rel="stylesheet" type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-        <link rel="stylesheet" type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            href="assets/css/style.css"
-            rel="stylesheet" />
+    <!-- Preload important resources -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"  defer/>
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" defer />
+
+        <script src="https://cdn.tailwindcss.com" defer></script>
+ 
 
     </head>
     <body class="bg-white poppins-regular ">
@@ -282,13 +287,13 @@
                             id="carousel">
                             <!-- Slide 1 -->
                             <div class="w-full flex-shrink-0">
-                                <img src="assets/img/banner.png"
+                                <img src="assets/img/banner.webp"
                                     class="w-full h-full object-cover"
                                     alt="Slide 1">
                             </div>
                             <!-- Slide 2 -->
                             <div class="w-full flex-shrink-0">
-                                <img src="assets/img/banner.png"
+                                <img src="assets/img/banner.webp"
                                     class="w-full h-full object-cover"
                                     alt="Slide 2">
                             </div>
@@ -336,7 +341,7 @@
                 <!-- Item 1 -->
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
-                        <img src="assets/img/magazin/karshakasree.png" alt="Magazine 1" class="w-full rounded-md">
+                        <img src="assets/img/magazin/karshakasree.webp" alt="Magazine 1" class="w-full rounded-md">
                         <p class="text-sm text-gray-500 mt-2">1hr ago</p>
                         <a href="#" class="text-green-600 font-semibold text-sm">Start Reading</a>
                     </div>
@@ -344,7 +349,7 @@
                 <!-- Item 2 -->
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
-                        <img src="assets/img/magazin/manorama-y.png" alt="Magazine 2" class="w-full rounded-md">
+                        <img src="assets/img/magazin/manorama-y.webp" alt="Magazine 2" class="w-full rounded-md">
                         <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                     </div>
@@ -352,7 +357,7 @@
                 <!-- Item 3 -->
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
-                        <img src="assets/img/magazin/manorama.png" alt="Magazine 3" class="w-full rounded-md">
+                        <img src="assets/img/magazin/manorama.webp" alt="Magazine 3" class="w-full rounded-md">
                         <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                     </div>
@@ -360,7 +365,7 @@
                 <!-- Item 4 -->
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
-                        <img src="assets/img/magazin/traveler.png" alt="Magazine 4" class="w-full rounded-md">
+                        <img src="assets/img/magazin/traveler.webp" alt="Magazine 4" class="w-full rounded-md">
                         <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                     </div>
@@ -368,7 +373,7 @@
                 <!-- Item 5 -->
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
-                        <img src="assets/img/books/avatharam.png" alt="Magazine 5" class="w-full rounded-md">
+                        <img src="assets/img/books/avatharam.webp" alt="Magazine 5" class="w-full rounded-md">
                         <p class="text-sm text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#" class="text-blue-600 font-semibold text-sm">Continue Reading</a>
                     </div>
@@ -395,7 +400,7 @@
             <div class="px-2 pb-2">
                 <div class="bg-white p-2  rounded-lg border">
                     <div class="relative">
-                        <img src="assets/img/subscription/1.png" alt="Magazine 1" class="w-full rounded-md">
+                        <img src="assets/img/subscription/1.webp" alt="Magazine 1" class="w-full rounded-md">
 
                      
                         <span class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
@@ -422,7 +427,7 @@
             <div class="px-2">
                 <div class="bg-white p-2  rounded-lg border">
                     <div class="relative">
-                        <img src="assets/img/subscription/1.png" alt="Magazine 1" class="w-full rounded-md">
+                        <img src="assets/img/subscription/1.webp" alt="Magazine 1" class="w-full rounded-md">
 
                      
                         <span class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
@@ -449,7 +454,7 @@
             <div class="px-2">
                 <div class="bg-white p-2 rounded-lg border">
                     <div class="relative">
-                        <img src="assets/img/subscription/1.png" alt="Magazine 1" class="w-full rounded-md">
+                        <img src="assets/img/subscription/1.webp" alt="Magazine 1" class="w-full rounded-md">
 
                      
                         <span class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
@@ -477,7 +482,7 @@
             <div class="px-2">
                 <div class="bg-white p-2  rounded-lg border">
                     <div class="relative">
-                        <img src="assets/img/subscription/1.png" alt="Magazine 1" class="w-full rounded-md">
+                        <img src="assets/img/subscription/1.webp" alt="Magazine 1" class="w-full rounded-md">
 
                      
                         <span class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
@@ -505,7 +510,7 @@
             <div class="px-2">
                 <div class="bg-white p-2  rounded-lg border">
                     <div class="relative">
-                        <img src="assets/img/subscription/1.png" alt="Magazine 1" class="w-full rounded-md">
+                        <img src="assets/img/subscription/1.webp" alt="Magazine 1" class="w-full rounded-md">
 
                      
                         <span class="absolute top-2 left-2 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-300">Dark</span>
@@ -545,7 +550,7 @@
                 <div class="flex items-center space-x-4 ">
 
                     <div class="relative">   
-                    <img src="assets/img/epaper&news/1.png" alt="Malayala Manorama Daily" class="w-34 h-38 rounded-md">
+                    <img src="assets/img/epaper&news/1.webp" alt="Malayala Manorama Daily" class="w-34 h-38 rounded-md">
                     <div class="absolute bottom-2 left-0  right-0">
                         <!-- <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div> -->
                         <div class=" w-full primary-bg text-white text-xs py-2 text-center rounded-md">🎁 Guaranteed Gifts With Every Purchase</div>
@@ -578,7 +583,7 @@
             <!-- Malayala Manorama E-Paper -->
             <div class="border rounded-lg shadow-sm p-4 flex items-center justify-between relative">
                 <div class="flex items-center space-x-4">
-                    <img src="assets/img/epaper&news/2.png" alt="Malayala Manorama E-Paper" class="w-34 h-38  rounded-md">
+                    <img src="assets/img/epaper&news/2.webp" alt="Malayala Manorama E-Paper" class="w-34 h-38  rounded-md">
                     <div>
                         <h3 class="font-semibold text-gray-800">Malayala Manorama E Paper</h3>
                         <p class="text-gray-600 text-sm">From <span class="font-semibold text-black">₹12</span> Per Issue</p>
