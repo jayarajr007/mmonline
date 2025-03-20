@@ -13,9 +13,9 @@
 
 
         <link rel="stylesheet" type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"  defer/>
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="print" onload="this.media='all'"  defer/>
         <link rel="stylesheet" type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" defer />
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" media="print" onload="this.media='all'"  defer />
 
         <script src="https://cdn.tailwindcss.com" defer></script>
  
@@ -288,13 +288,13 @@
                             <!-- Slide 1 -->
                             <div class="w-full flex-shrink-0">
                                 <img src="assets/img/banner.webp"
-                                    class="w-full h-full object-cover lazyload "
+                                    class="w-full h-full object-cover"
                                     alt="Slide 1" width="1200" height="600">
-                            </div>
+                            </div> 
                             <!-- Slide 2 -->
                             <div class="w-full flex-shrink-0">
                                 <img src="assets/img/banner.webp"
-                                    class="w-full h-full object-cover lazyload "
+                                    class="w-full h-full object-cover  "
                                     alt="Slide 2" width="1200" height="600">
                             </div>
                             <!-- Slide 3 -->
@@ -693,16 +693,7 @@
     
 
 
-    <script>
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    let lazyImages = document.querySelectorAll(".lazyload");
-    lazyImages.forEach(img => {
-        img.src = img.dataset.src;
-    });
-});
-    </script>
+  
 
     </body>
 </html>
