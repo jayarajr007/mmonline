@@ -175,7 +175,10 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
-
+.logo
+{
+  max-width: 300px;
+}
 
 
 .offer-circle-badge
@@ -206,13 +209,13 @@ body {
 
 .section-height
 {
-  min-height: 371px;
+  min-height: 200px;
 }
 
 @media screen and (max-width: 1279px) {
   .section-height
   {
-        min-height: 311px;
+        min-height: 200px;
   }
 }
 
