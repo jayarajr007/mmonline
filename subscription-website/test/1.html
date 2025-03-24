@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100% Performance Magazine Slider</title>
+
+    <!-- Glide.js CSS (Minified for Speed) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+
+    <style>
+        /* Ensure No CLS (Fixed Heights) */
+        .glide {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .glide__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            height: 250px;
+            /* Fixed height to avoid CLS */
+        }
+
+        .glide__slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Hide Navigation on Small Screens */
+        @media (max-width: 768px) {
+            .glide__arrows {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Glide.js Slider -->
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
+        </div>
+    </div>
+
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
+        </div>
+    </div>
+
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
+        </div>
+    </div>
+
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
+        </div>
+    </div>
+
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+                <li class="glide__slide"><img src="assets/img/magazin/karshakasree.webp" loading="lazy"
+                        alt="Magazine 1"></li>
+                <li class="glide__slide"><img src="assets/img/subscription/1.webp" loading="lazy" alt="Magazine 2"></li>
+                <li class="glide__slide"><img src="assets/img/magazin/manorama.webp" loading="lazy" alt="Magazine 3">
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
+        </div>
+    </div>
+    <!-- Glide.js JS (Minified for Speed) -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+        // Initialize Glide.js
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 5, // Show 5 magazines at a time
+            focusAt: 'center',
+            gap: 20, // Space between slides
+            autoplay: 3000, // Auto-slide every 3s
+            hoverpause: true,
+            breakpoints: {
+                1200: { perView: 5 },
+                992: { perView: 4 },
+                768: { perView: 3 },
+                576: { perView: 2 },
+                320: { perView: 1 }
+            }
+        }).mount();
+    </script>
+
+</body>
+
+</html>

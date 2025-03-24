@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider Optimized for CLS</title>
+
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="assets/img/magazin/manorama.webp" type="image/webp">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        media="print" onload="this.onload=null;this.removeAttribute('media');">
+
+
+    <style>
+        /* Prevent CLS with aspect ratio & min-height */
+        .slick-slider .slick-slide {
+            min-height: 256px;
+            aspect-ratio: 16 / 9;
+            /* Ensures height consistency */
+        }
+
+        /* Hide all slides except the first before Slick initializes */
+        .slick-slider>div:not(:first-child) {
+            display: none;
+        }
+
+        /* Once Slick initializes, show all slides */
+        .slick-initialized .slick-slider>div {
+            display: block !important;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4">Purchased Recently</h2>
+
+        <div class="slick-slider">
+            <!-- First Image (LCP Optimized - No Lazy Load) -->
+            <div class="p-2">
+                <img src="assets/img/magazin/manorama.webp" alt="Magazine 1"
+                    class="rounded-md w-full h-64 object-cover">
+            </div>
+
+            <!-- Remaining Images (Lazy Loaded) -->
+            <div class="p-2">
+                <img src="assets/img/magazin/manorama.webp" alt="Magazine 2" class="rounded-md w-full h-64 object-cover"
+                    loading="lazy">
+            </div>
+            <div class="p-2">
+                <img src="assets/img/magazin/manorama.webp" alt="Magazine 3" class="rounded-md w-full h-64 object-cover"
+                    loading="lazy">
+            </div>
+            <div class="p-2">
+                <img src="assets/img/magazin/manorama.webp" alt="Magazine 4" class="rounded-md w-full h-64 object-cover"
+                    loading="lazy">
+            </div>
+            <div class="p-2">
+                <img src="assets/img/magazin/manorama.webp" alt="Magazine 5" class="rounded-md w-full h-64 object-cover"
+                    loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Deferred) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JS (Deferred) -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Initialize Slick Slider -->
+    <script>
+        $(window).on("load", function () {
+            $('.slick-slider').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+                arrows: true,
+                adaptiveHeight: false, // Prevents CLS by maintaining height
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                    { breakpoint: 480, settings: { slidesToShow: 1 } }
+                ]
+            });
+
+            // Ensure all slides are visible after Slick initializes
+            $(".slick-slider > div").css("display", "block");
+        });
+    </script>
+
+</body>
+
+</html>
