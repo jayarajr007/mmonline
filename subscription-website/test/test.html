@@ -12,7 +12,41 @@
         <title>Flowbite Starter</title>
 
         <!-- Preload important resources -->
+        <style>
 
+            .image-box
+            {
+                position:relative;
+          height: 0;
+          padding-bottom: 131.43939393939394%
+            }
+        
+            .image-box img
+            {
+                position:absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+            }
+        
+            /* Hide all slides except the first before Slick initializes */
+        .slick-slider>div:not(:first-child) {
+          display: none;
+        }
+        
+        .slick-track > div:first-child  {
+        max-width: 282px;
+        }
+        
+        /* Once Slick initializes, show all slides */
+        .slick-initialized .slick-list {
+          display: block !important;
+        }
+        
+        
+        
+        </style>
         <link rel="stylesheet" href="assets/css/style.css">
 
         <link rel="preload" as="image" href="assets/img/banner-mobile.webp"
@@ -22,24 +56,7 @@
         <link rel="preload" as="image"
             href="assets/img/magazin/manorama-y.webp">
 
-        <style>
-
-    .image-box
-    {
-        position:relative;
-  height: 0;
-  padding-bottom: 131.43939393939394%
-    }
-
-    .image-box img
-    {
-        position:absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-    }
-</style>
+       
 
         <script src="https://cdn.tailwindcss.com/"></script>
 
