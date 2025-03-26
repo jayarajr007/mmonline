@@ -41,9 +41,7 @@
         .slick-initialized .slick-list {
           display: block !important;
         }
-        img {
-  aspect-ratio: 2 / 1; /* 1200 / 600 */
-}
+        
         
         
         </style>
@@ -347,16 +345,14 @@
                             width="1200" height="600"> -->
 
 
-                            <picture>
-                                <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/webp" width="600" height="300">
-                                <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/webp">
-                                <img src="assets/img/banner.webp" alt="Responsive Banner" 
-                                     width="1200" height="600"
-                                     class="w-full h-full object-contain"
-                                     fetchpriority="high">
-                              </picture>
-                              
-          
+                          <picture>
+  <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/webp">
+  <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/webp">
+  <img src="assets/img/banner.webp" alt="Responsive Banner" 
+       width="1200" height="600"
+       class="w-full h-full object-contain"
+       fetchpriority="high">
+</picture>
 
 
                               
