@@ -55,13 +55,13 @@
             href="assets/img/magazin/manorama-y.webp"> -->
 
        
-     <link rel="preload" as="image" href="assets/img/banner.webp">
-        
-    
-     <link rel="preload" as="image" href="assets/img/banner-mobile.webp">
 
-
+     <link rel="preload" as="image" href="assets/img/banner.webp" type="image/webp" fetchpriority="high">
+     <link rel="preload" as="image" href="assets/img/banner-mobile.webp" type="image/webp" fetchpriority="high">
         <script src="https://cdn.tailwindcss.com/"></script>
+
+
+   
 
     </head>
 
@@ -344,16 +344,23 @@
                             <!-- <img src="assets/img/banner.webp" class="w-full h-full object-contain  " alt="Slide 2"
                             width="1200" height="600"> -->
 
-                            <picture>
+
+                              <picture>
+                                <!-- Mobile version (max 768px) -->
+                                <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/webp">
                               
-                                <source srcset="assets/img/banner-mobile.webp"   media="(max-width: 768px)">
-                                
-                        
-                                <source srcset="assets/img/banner.webp" media="(min-width: 769px)">
+                                <!-- Desktop version (min 769px) -->
+                                <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/webp">
                               
-                    
-                                <img src="assets/img/banner.webp" alt="Responsive Banner" width="1200" loading="lazy"  class="w-full h-full object-contain  " height="600">
+                                <!-- Fallback image -->
+                                <img src="assets/img/banner.webp" alt="Responsive Banner" 
+                                     width="1200" height="600"
+                                     class="w-full h-full object-contain"
+                                     fetchpriority="high">
                               </picture>
+
+
+                              
 
 
 <!-- 
