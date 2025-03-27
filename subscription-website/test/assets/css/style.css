@@ -200,7 +200,7 @@ body {
 
 .section-height
 {
-  min-height: 400px;
+  min-height: 500px;
 }
 
 @media screen and (max-width: 1279px) {
