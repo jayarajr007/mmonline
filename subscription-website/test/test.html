@@ -356,18 +356,15 @@
 
 
 <picture>
-    <!-- Use preloading to prioritize image loading -->
-    <link rel="preload" as="image" href="assets/img/banner.webp" type="image/webp">
-  
-    <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/webp">
-    <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/webp">
+    <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/avif">
+    <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/avif">
     
     <img src="assets/img/banner.webp" 
          alt="Responsive Banner" 
          width="1200" height="600"
          class="w-full h-full object-contain"
          fetchpriority="high"
-         decoding="async" 
+         decoding="async"
          loading="eager">
   </picture>
   
