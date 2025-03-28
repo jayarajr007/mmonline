@@ -72,28 +72,33 @@
                 <div class="flex justify-between items-center py-3">
 
                     <div class="header-left-section">
-              
+                        <!-- Logo -->
                         <a href="#" class="flex items-center">
-             
+                            <!-- <img src="assets/img/logo.svg" alt="Manorama Logo" class="h-10" width="300px"> -->
 
                             <picture>
-                    
+                                <!-- Mobile Image -->
                                 <source srcset="assets/img/mobile-logo.png"
                                     width="40" height="40"
                                     media="(max-width: 768px)">
 
-         
+                                <!-- Web Image -->
                                 <source srcset="assets/img/logo.svg"
                                     media="(min-width: 769px)">
 
-                         
+                                <!-- Fallback Image -->
                                 <img src="assets/img/logo.svg"
                                     alt="Responsive Banner" class="h-10 logo" width="275" height="40">
                             </picture>
 
                         </a>
                     </div>
-    
+                    <!-- Search Bar (Hidden on small screens) -->
+
+                    <!-- 
+                    
+
+-->
                     <div class="flex items-center space-x-4">
                         <div
                             class="flex items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block">
@@ -142,6 +147,8 @@
                             <!-- User Icon -->
                         </div>
                     </div>
+
+                    <!-- -->
 
                 </div>
 
@@ -331,8 +338,33 @@
                             </div>  -->
                         <!-- Slide 2 -->
                         <div class="w-full flex-shrink-0" style="min-height: 130px;">
-                      
- 
+                            <!-- <img src="assets/img/banner.webp" class="w-full h-full object-contain  " alt="Slide 2"
+                            width="1200" height="600"> -->
+
+
+                          <!-- <picture>
+  <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/webp">
+  <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/webp">
+  <img src="assets/img/banner.webp" alt="Responsive Banner" 
+       width="1200" height="600"
+       class="w-full h-full object-contain"
+       fetchpriority="high">
+</picture> -->
+
+
+<!-- <picture>
+    <source srcset="assets/img/banner-mobile.webp" media="(max-width: 768px)" type="image/avif">
+    <source srcset="assets/img/banner.webp" media="(min-width: 769px)" type="image/avif">
+    
+    <img src="assets/img/banner.webp" 
+         alt="Responsive Banner" 
+         width="1200" height="600"
+         class="w-full h-full object-contain"
+         fetchpriority="high"
+         decoding="async"
+         loading="eager">
+  </picture>
+   -->
 
 
                               
@@ -362,7 +394,16 @@
                         <!-- Slide 3 -->
                         <div class="w-full flex-shrink-0"  style="min-height: 130px;">
                         
+                            <!-- <picture>
+                     
+                                <source srcset="assets/img/banner-mobile.webp" width="700" height="345" media="(max-width: 768px)">
+                                
                           
+                                <source srcset="assets/img/banner.webp" media="(min-width: 769px)">
+                              
+                            
+                                <img src="assets/img/banner.webp" alt="Responsive Banner"  class="w-full h-full object-contain  " width="1200" height="600">
+                              </picture> -->
                               <img src="assets/img/banner.webp"
                               alt="Responsive Banner" width="1200"
                               height="600" 
