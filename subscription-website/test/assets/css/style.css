@@ -1,4 +1,4 @@
-
+/* 
 @font-face {
   font-family: 'Poppins';
   src: url('./font/poppins/PoppinsBlackItalic.woff2') format('woff2'),
@@ -161,7 +161,7 @@
   font-weight: 600;
   font-style: italic;
   font-display: swap;
-}
+} */
 
 
 .dark-bg
@@ -172,9 +172,9 @@
   background: #333994;
 }
   
-body {
+/* body {
   font-family: 'Poppins', sans-serif;
-}
+} */
 .logo
 {
   max-width: 275px;
