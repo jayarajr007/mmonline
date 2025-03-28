@@ -395,9 +395,9 @@
 
                         </div>
                         <!-- Slide 3 -->
-                        <!-- <div class="w-full flex-shrink-0">
+                        <div class="w-full flex-shrink-0"  style="min-height: 130px;">
                         
-                            <picture>
+                            <!-- <picture>
                      
                                 <source srcset="assets/img/banner-mobile.webp" width="700" height="345" media="(max-width: 768px)">
                                 
@@ -406,8 +406,23 @@
                               
                             
                                 <img src="assets/img/banner.webp" alt="Responsive Banner"  class="w-full h-full object-contain  " width="1200" height="600">
-                              </picture>
-                    </div> -->
+                              </picture> -->
+                              <img src="assets/img/banner.webp"
+                              alt="Responsive Banner" width="1200"
+                              height="600" 
+                              class="w-full h-full object-contain  hidden md:block"
+                              style="min-height: 130px;" decoding="async"
+                              loading="eager"  fetchpriority="high">
+
+
+                          <img src="assets/img/banner-mobile.webp"
+                              alt="Responsive Banner" width="700" height="345"
+                              class="w-full h-full object-contain  block md:hidden"
+                          
+                              decoding="async"
+                              loading="eager"  fetchpriority="high">
+
+                    </div> 
 
                     </div>
                 </div>
