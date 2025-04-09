@@ -194,7 +194,13 @@ body {
   background-color: #ED002B;
 }
 
-
+.global-search
+{
+  border-radius: 3px !important;
+  border: 1px solid var(--Border-Color, #E0E0E0);
+  background: #FFF;
+  padding: 11px 12px !important;
+}
 
 
 
