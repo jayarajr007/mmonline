@@ -60,17 +60,16 @@
         </style>
         <link rel="stylesheet" href="assets/css/style.css">
 
+        <link rel="preload" as="image" href="assets/img/banner.webp"
+            type="image/webp">
+        <link rel="preload" as="image" href="assets/img/banner-mobile.webp"
+            type="image/webp">
 
-     <link rel="preload" as="image" href="assets/img/banner.webp" type="image/webp">
-     <link rel="preload" as="image" href="assets/img/banner-mobile.webp" type="image/webp">
+        <link rel="preload" as="image" href="/assets/img/books/a2.webp"
+            type="image/webp">
 
-
-     <link rel="preload" as="image" href="/assets/img/books/a2.webp" type="image/webp">
-
-     <link rel="preload" as="image" href="/assets/img/subscription/1.webp" type="image/webp">
-
- 
-
+        <link rel="preload" as="image" href="/assets/img/subscription/1.webp"
+            type="image/webp">
 
         <script src="https://cdn.tailwindcss.com/"></script>
     </head>
@@ -82,42 +81,67 @@
         <header class="bg-white  z-40 relative sticky top-0 ">
             <div
                 class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
+                <div
+                    class="flex justify-between items-center py-3 border-b border-b-[#D9D9D9]">
 
                     <div class="header-left-section">
-              
-                        <a href="#" class="flex items-center">
-             
+
+                        <a href="#" class="flex items-center md:block hidden ">
 
                             <picture>
-                    
+
                                 <source srcset="assets/img/mobile-logo.png"
                                     width="40" height="40"
                                     media="(max-width: 768px)">
 
-         
                                 <source srcset="assets/img/logo.svg"
                                     media="(min-width: 769px)">
 
-                         
                                 <img src="assets/img/logo.svg"
-                                    alt="Responsive Banner" class=" logo" width="275" height="40">
+                                    alt="Responsive Banner" class=" logo"
+                                    width="275" height="40">
                             </picture>
 
                         </a>
+
+
+                        <a href="#" class="flex items-center md:hidden  ">
+                            <div class="flex items-center space-x-3 px-0 pt-0">
+                                <!-- Profile Icon -->
+                                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                                  <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+                                  </svg>
+                                </div>
+                              
+                                <!-- Text Info -->
+                                <div>
+                                  <p class="text-sm font-medium text-gray-900">Hello</p>
+                                  <p class="text-xs text-gray-500">Let's Shop</p>
+                                </div>
+                              </div>
+                              
+
+                        </a>
                     </div>
-    
+
                     <div class="flex items-center space-x-4">
                         <div
                             class="global-search items-center border border-gray-300 rounded-md px-3 py-2 hidden md:block">
 
-                            <div class="flex ">  
-                            <input type="text"
-                                placeholder="Search For Title, Author Or Keyword.."
-                                class="lg:w-96 md:w-64 bg-transparent outline-none text-sm ">
-                            <span class="text-gray-500 cursor-pointer"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.84564 15.12C5.65287 15.12 3.79708 14.3817 2.27825 12.9052C0.759416 11.4286 0 9.64688 0 7.56C0 5.47313 0.760236 3.69141 2.28071 2.21484C3.80118 0.738281 5.64095 0 7.80002 0C9.9591 0 11.7938 0.738281 13.3041 2.21484C14.8145 3.69141 15.5696 5.4746 15.5696 7.56443C15.5696 8.40804 15.4277 9.22359 15.1439 10.0111C14.8601 10.7986 14.4344 11.5369 13.8667 12.2259L21.2258 19.3134C21.4083 19.4819 21.4995 19.6963 21.4995 19.9566C21.4995 20.2169 21.4083 20.4356 21.2258 20.6128C21.0433 20.79 20.8181 20.8786 20.55 20.8786C20.282 20.8786 20.0612 20.79 19.8878 20.6128L12.5591 13.4958C11.9509 14.0077 11.2418 14.4063 10.4317 14.6918C9.6216 14.9773 8.75959 15.12 7.84564 15.12ZM7.81523 13.3481C9.46241 13.3481 10.8625 12.7821 12.0155 11.6501C13.1686 10.518 13.7451 9.15469 13.7451 7.56C13.7451 5.96531 13.1686 4.60195 12.0155 3.46992C10.8625 2.33789 9.46241 1.77188 7.81523 1.77188C6.15116 1.77188 4.7367 2.33789 3.57183 3.46992C2.40699 4.60195 1.82457 5.96531 1.82457 7.56C1.82457 9.15469 2.40699 10.518 3.57183 11.6501C4.7367 12.7821 6.15116 13.3481 7.81523 13.3481Z" fill="#111111" fill-opacity="0.75"/>
-                                </svg>
+                            <div class="flex ">
+                                <input type="text"
+                                    placeholder="Search For Title, Author Or Keyword.."
+                                    class="lg:w-96 md:w-64 bg-transparent outline-none text-sm ">
+                                <span class="text-gray-500 cursor-pointer"><svg
+                                        width="22" height="21"
+                                        viewBox="0 0 22 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.84564 15.12C5.65287 15.12 3.79708 14.3817 2.27825 12.9052C0.759416 11.4286 0 9.64688 0 7.56C0 5.47313 0.760236 3.69141 2.28071 2.21484C3.80118 0.738281 5.64095 0 7.80002 0C9.9591 0 11.7938 0.738281 13.3041 2.21484C14.8145 3.69141 15.5696 5.4746 15.5696 7.56443C15.5696 8.40804 15.4277 9.22359 15.1439 10.0111C14.8601 10.7986 14.4344 11.5369 13.8667 12.2259L21.2258 19.3134C21.4083 19.4819 21.4995 19.6963 21.4995 19.9566C21.4995 20.2169 21.4083 20.4356 21.2258 20.6128C21.0433 20.79 20.8181 20.8786 20.55 20.8786C20.282 20.8786 20.0612 20.79 19.8878 20.6128L12.5591 13.4958C11.9509 14.0077 11.2418 14.4063 10.4317 14.6918C9.6216 14.9773 8.75959 15.12 7.84564 15.12ZM7.81523 13.3481C9.46241 13.3481 10.8625 12.7821 12.0155 11.6501C13.1686 10.518 13.7451 9.15469 13.7451 7.56C13.7451 5.96531 13.1686 4.60195 12.0155 3.46992C10.8625 2.33789 9.46241 1.77188 7.81523 1.77188C6.15116 1.77188 4.7367 2.33789 3.57183 3.46992C2.40699 4.60195 1.82457 5.96531 1.82457 7.56C1.82457 9.15469 2.40699 10.518 3.57183 11.6501C4.7367 12.7821 6.15116 13.3481 7.81523 13.3481Z"
+                                            fill="#111111"
+                                            fill-opacity="0.75" />
+                                    </svg>
                                 </span>
                             </div>
                             <!-- Search Icon -->
@@ -126,6 +150,12 @@
                         <!-- Icons (Beside Search) -->
 
                         <div class="flex ">
+                            <span class="mr-5 md:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2889 23L13.5889 15.3C12.9778 15.7889 12.275 16.1759 11.4806 16.4611C10.6861 16.7463 9.84074 16.8889 8.94444 16.8889C6.72407 16.8889 4.84491 16.1199 3.30694 14.5819C1.76898 13.044 1 11.1648 1 8.94444C1 6.72407 1.76898 4.84491 3.30694 3.30694C4.84491 1.76898 6.72407 1 8.94444 1C11.1648 1 13.044 1.76898 14.5819 3.30694C16.1199 4.84491 16.8889 6.72407 16.8889 8.94444C16.8889 9.84074 16.7463 10.6861 16.4611 11.4806C16.1759 12.275 15.7889 12.9778 15.3 13.5889L23 21.2889L21.2889 23ZM8.94444 14.4444C10.4722 14.4444 11.7708 13.9097 12.8403 12.8403C13.9097 11.7708 14.4444 10.4722 14.4444 8.94444C14.4444 7.41667 13.9097 6.11806 12.8403 5.04861C11.7708 3.97917 10.4722 3.44444 8.94444 3.44444C7.41667 3.44444 6.11806 3.97917 5.04861 5.04861C3.97917 6.11806 3.44444 7.41667 3.44444 8.94444C3.44444 10.4722 3.97917 11.7708 5.04861 12.8403C6.11806 13.9097 7.41667 14.4444 8.94444 14.4444Z" fill="black"/>
+                                </svg>
+                                
+                        </span>
+
                             <span class="mr-5"><svg width="24" height="23"
                                     viewBox="0 0 24 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +165,7 @@
                                 </svg>
                             </span>
                             <!-- Cart Icon -->
-                            <span class="mr-5"><svg width="22" height="24"
+                            <span class="md:mr-5 mr-0"><svg width="22" height="24"
                                     viewBox="0 0 22 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -147,7 +177,7 @@
                                 </svg>
                             </span>
                             <!-- Notification Icon -->
-                            <span class="mr-0"><svg width="24" height="23"
+                            <span class="mr-0 hidden md:block"><svg width="24" height="23"
                                     viewBox="0 0 24 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -221,131 +251,235 @@
 
                 <nav class="bg-white hidden md:block relative">
                     <div class=" mx-auto px-4">
-                      <div class="flex py-4 justify-between w-full">
-                        <ul class="hidden md:flex space-x-8 text-gray-700 font-semibold justify-between w-full text-left">
-                          <li>
-                            <a href="#" class="hover:text-blue-500 text-sm">MANORAMA DAILY & E PAPER</a>
-                          </li>
-                  
-                          <!-- Premium Subscription Dropdown -->
-                          <li class="relative group">
-                            <button class="text-left hover:text-blue-500 flex items-center text-sm">PREMIUM SUBSCRIPTION <span class="ml-2"> <svg width="12" height="8" viewBox="0 0 12 8" fill="none" class="" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M-0.00260358 1.6819L1.03281 0.646484L5.83073 5.4444L10.6286 0.646484L11.6641 1.6819L5.83073 7.51524L-0.00260358 1.6819Z" fill="#5F6368"/>
-                                </svg>
-                                </span></button>
-                            <ul class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block">
-                              <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Plan 1</a></li>
-                              <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Plan 2</a></li>
+                        <div class="flex py-4 justify-between w-full">
+                            <ul
+                                class="hidden md:flex space-x-8 text-gray-700 font-semibold justify-between w-full text-left">
+                                <li>
+                                    <a href="#"
+                                        class="hover:text-blue-500 text-sm">MANORAMA
+                                        DAILY & E PAPER</a>
+                                </li>
+
+                                <!-- Premium Subscription Dropdown -->
+                                <li class="relative group">
+                                    <button
+                                        class="text-left hover:text-blue-500 flex items-center text-sm">PREMIUM
+                                        SUBSCRIPTION <span class="ml-2"> <svg
+                                                width="12" height="8"
+                                                viewBox="0 0 12 8" fill="none"
+                                                class
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M-0.00260358 1.6819L1.03281 0.646484L5.83073 5.4444L10.6286 0.646484L11.6641 1.6819L5.83073 7.51524L-0.00260358 1.6819Z"
+                                                    fill="#5F6368" />
+                                            </svg>
+                                        </span></button>
+                                    <ul
+                                        class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block">
+                                        <li><a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-200">Plan
+                                                1</a></li>
+                                        <li><a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-200">Plan
+                                                2</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Magazines Mega Menu -->
+                                <li class=" group z-50">
+                                    <button
+                                        class="text-left hover:text-blue-500 flex items-center text-sm">MAGAZINES
+                                        <span class="ml-2"> <svg width="12"
+                                                height="8" viewBox="0 0 12 8"
+                                                fill="none" class
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M-0.00260358 1.6819L1.03281 0.646484L5.83073 5.4444L10.6286 0.646484L11.6641 1.6819L5.83073 7.51524L-0.00260358 1.6819Z"
+                                                    fill="#5F6368" />
+                                            </svg>
+                                        </span></button>
+                                    <div
+                                        class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50 w-full "min-w-full">
+                                        <!-- Column 1 -->
+                                        <div class="w-1/6">
+                                            <h4
+                                                class="font-semibold text-gray-800 text-sm mb-2">News
+                                                and Information</h4>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Thozhilveedhi</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Karshakasree</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Bhashaposhini</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Sampadyam</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">The
+                                                        Week</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Livingetc</a></li>
+                                            </ul>
+                                            <h4
+                                                class="font-bold text-gray-800 text-sm mt-4 mb-2">Health</h4>
+                                            <a href="#"
+                                                class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Arogyam</a>
+                                        </div>
+
+                                        <!-- Repeat same structure for other columns -->
+                                        <!-- Column 2: Children -->
+                                        <div class="w-1/6">
+                                            <h4
+                                                class="font-semibold text-gray-800 text-sm mb-2">Children</h4>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Magic
+                                                        Pot</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Kalikkudukka</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Balarama
+                                                        Digest</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">National
+                                                        Geographic Kids</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Balarama
+                                                        Amar Chithra
+                                                        Kadha</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Akkad
+                                                        Bakkad</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Kadhayum
+                                                        Niravum</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Read
+                                                        And Colour</a></li>
+                                                <li><a href="#"
+                                                        class="text-sm text-blue-500 mt-2 block font-semibold">View
+                                                        All</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 3: English Magazines -->
+                                        <div class="w-1/6">
+                                            <h4
+                                                class="font-semibold text-gray-800 text-sm mb-2">English
+                                                Magazines</h4>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">The
+                                                        Week</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Magic
+                                                        Pot</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Tell
+                                                        Me Why</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Read
+                                                        And Colour</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Watch
+                                                        Time India</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">National
+                                                        Geographic Kids</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Livingetc</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 4: Lifestyle -->
+                                        <div class="w-1/6">
+                                            <h4
+                                                class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Manorama
+                                                        Weekly</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Manorama
+                                                        Traveller</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Fasttrack</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Watch
+                                                        Time India</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Veedu</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 5: Women -->
+                                        <div class="w-1/6">
+                                            <h4
+                                                class="font-semibold text-gray-800 text-sm mb-2">Women</h4>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Vanitha
+                                                        Pachakam</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Vanitha</a></li>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Vanita
+                                                        Hindi</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 6: Career and General -->
+                                        <div class="w-1/6">
+                                            <h4
+                                                class="font-semibold text-gray-800 text-sm mb-2">Career
+                                                and General</h4>
+                                            <ul>
+                                                <li><a href="#"
+                                                        class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Thozhilveedhi</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Books Dropdown -->
+                                <li class="relative group">
+                                    <button
+                                        class="hover:text-blue-500 flex items-center text-sm">BOOKS
+                                        <span class="ml-2"> <svg width="12"
+                                                height="8" viewBox="0 0 12 8"
+                                                fill="none" class
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M-0.00260358 1.6819L1.03281 0.646484L5.83073 5.4444L10.6286 0.646484L11.6641 1.6819L5.83073 7.51524L-0.00260358 1.6819Z"
+                                                    fill="#5F6368" />
+                                            </svg>
+                                        </span></button>
+                                    <ul
+                                        class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block">
+                                        <li><a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-200">E-Books</a></li>
+                                        <li><a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-200">Printed
+                                                Books</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Other Links -->
+                                <li><a href="#"
+                                        class="hover:text-blue-500 text-sm">YEAR
+                                        BOOK</a></li>
+                                <li><a href="#"
+                                        class="hover:text-blue-500 text-sm">ASTRO</a></li>
+                                <li><a href="#"
+                                        class="hover:text-blue-500 text-sm">MANORAMA
+                                        MAX</a></li>
+                                <li><a href="#"
+                                        class="hover:text-blue-500 text-sm">OFFERS</a></li>
                             </ul>
-                          </li>
-                  
-                          <!-- Magazines Mega Menu -->
-                          <li class=" group z-50">
-                            <button class="text-left hover:text-blue-500 flex items-center text-sm">MAGAZINES <span class="ml-2"> <svg width="12" height="8" viewBox="0 0 12 8" fill="none" class="" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M-0.00260358 1.6819L1.03281 0.646484L5.83073 5.4444L10.6286 0.646484L11.6641 1.6819L5.83073 7.51524L-0.00260358 1.6819Z" fill="#5F6368"/>
-                                </svg>
-                                </span></button>
-                            <div class="absolute left-0 w-full bg-white shadow-lg hidden group-hover:flex flex-wrap px-8 py-6 gap-x-8 top-[38px] z-50 w-full "min-w-full">
-                              <!-- Column 1 -->
-                              <div class="w-1/6">
-                                <h4 class="font-semibold text-gray-800 text-sm mb-2">News and Information</h4>
-                                <ul>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Thozhilveedhi</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Karshakasree</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Bhashaposhini</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Sampadyam</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">The Week</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal font-normal">Livingetc</a></li>
-                                </ul>
-                                <h4 class="font-bold text-gray-800 text-sm mt-4 mb-2">Health</h4>
-                                <a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Arogyam</a>
-                              </div>
-                  
-                              <!-- Repeat same structure for other columns -->
-                              <!-- Column 2: Children -->
-                              <div class="w-1/6">
-                                <h4 class="font-semibold text-gray-800 text-sm mb-2">Children</h4>
-                                <ul>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Magic Pot</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Kalikkudukka</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Balarama Digest</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">National Geographic Kids</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Balarama Amar Chithra Kadha</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Akkad Bakkad</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Kadhayum Niravum</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Read And Colour</a></li>
-                                  <li><a href="#" class="text-sm text-blue-500 mt-2 block font-semibold">View All</a></li>
-                                </ul>
-                              </div>
-                  
-                              <!-- Column 3: English Magazines -->
-                              <div class="w-1/6">
-                                <h4 class="font-semibold text-gray-800 text-sm mb-2">English Magazines</h4>
-                                <ul>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">The Week</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Magic Pot</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Tell Me Why</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Read And Colour</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Watch Time India</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">National Geographic Kids</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Livingetc</a></li>
-                                </ul>
-                              </div>
-                  
-                              <!-- Column 4: Lifestyle -->
-                              <div class="w-1/6">
-                                <h4 class="font-semibold text-gray-800 text-sm mb-2">Lifestyle</h4>
-                                <ul>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Manorama Weekly</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Manorama Traveller</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Fasttrack</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Watch Time India</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Veedu</a></li>
-                                </ul>
-                              </div>
-                  
-                              <!-- Column 5: Women -->
-                              <div class="w-1/6">
-                                <h4 class="font-semibold text-gray-800 text-sm mb-2">Women</h4>
-                                <ul>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Vanitha Pachakam</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Vanitha</a></li>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Vanita Hindi</a></li>
-                                </ul>
-                              </div>
-                  
-                              <!-- Column 6: Career and General -->
-                              <div class="w-1/6">
-                                <h4 class="font-semibold text-gray-800 text-sm mb-2">Career and General</h4>
-                                <ul>
-                                  <li><a href="#" class="block text-sm text-gray-600 hover:text-blue-500 py-1 font-normal">Thozhilveedhi</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </li>
-                  
-                          <!-- Books Dropdown -->
-                          <li class="relative group">
-                            <button class="hover:text-blue-500 flex items-center text-sm">BOOKS <span class="ml-2"> <svg width="12" height="8" viewBox="0 0 12 8" fill="none" class="" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M-0.00260358 1.6819L1.03281 0.646484L5.83073 5.4444L10.6286 0.646484L11.6641 1.6819L5.83073 7.51524L-0.00260358 1.6819Z" fill="#5F6368"/>
-                                </svg>
-                                </span></button>
-                            <ul class="absolute left-0 w-48 bg-white shadow-lg hidden group-hover:block">
-                              <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">E-Books</a></li>
-                              <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Printed Books</a></li>
-                            </ul>
-                          </li>
-                  
-                          <!-- Other Links -->
-                          <li><a href="#" class="hover:text-blue-500 text-sm">YEAR BOOK</a></li>
-                          <li><a href="#" class="hover:text-blue-500 text-sm">ASTRO</a></li>
-                          <li><a href="#" class="hover:text-blue-500 text-sm">MANORAMA MAX</a></li>
-                          <li><a href="#" class="hover:text-blue-500 text-sm">OFFERS</a></li>
-                        </ul>
-                      </div>
+                        </div>
                     </div>
-                  </nav>
-                  
+                </nav>
+
                 <!-- Mobile Menu -->
                 <div id="mobile-menu"
                     class="hidden md:hidden bg-white shadow-lg p-4 space-y-2">
@@ -373,90 +507,231 @@
             </div>
         </header>
 
-<!-- Bottom Navigation - Mobile Only -->
-<nav class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 md:hidden shadow-md">
-    <div class="flex justify-between px-4 py-2 text-xs text-center">
-      
-      <a href="#" class="flex flex-col items-center text-red-600">
-        <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9h-3v9h-12v-9h-3z"/></svg>
-        <span>Home</span>
-      </a>
-  
-      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
-        <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c4.42 0 8.14-3.16 8.88-7.33l-1.88-.67c-.6 3.31-3.43 5.67-6.99 5.67-3.87 0-7-3.13-7-7s3.13-7 7-7v-2z"/></svg>
-        <span>Offers</span>
-      </a>
-  
-      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
-        <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M3 6h18v2h-18zM3 12h18v2h-18zM3 18h18v2h-18z"/></svg>
-        <span>Categories</span>
-      </a>
-  
-      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
-        <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-        <span>Account</span>
-      </a>
-  
-    </div>
-  </nav> 
-  
+        <!-- Bottom Navigation - Mobile Only -->
+        <nav
+            class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 md:hidden shadow-md">
+            <div class="flex justify-between px-4 py-2 text-xs text-center">
 
-        <div class="container mx-auto px-4 py-6 md:hidden"> 
-            <h2 class="text-xl font-bold">Welcome</h2>
-            <h3 class="text-lg font-semibold mb-4">What Are You Looking For?</h3>
-        
+                <a href="#" class="flex flex-col items-center text-red-600">
+                    <img src="assets/img/menu/bottom-nav/1.png" />
+
+                    <span class="uppercase font-semibold text-black">Home</span>
+                </a>
+
+                <a href="#"
+                    class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+                    <img src="assets/img/menu/bottom-nav/2.png"/>
+                    <span class="uppercase font-semibold text-black">Offers</span>
+                </a>
+
+                <a href="#"
+                    class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+                    <img src="assets/img/menu/bottom-nav/3.png"/>
+
+                    <span class="uppercase font-semibold text-black">Categories</span>
+                </a>
+
+                <a href="#"
+                    class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+                    <img src="assets/img/menu/bottom-nav/4.png"/>
+                    <span class="uppercase font-semibold text-black">Account</span>
+                </a>
+
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-4 py-6 md:hidden">
+            <h2 class="text-xl font-normal">Welcome</h2>
+            <h3 class="text-lg font-semibold mb-4">What Are You Looking
+                For?</h3>
+
             <div class="grid grid-cols-2 gap-3">
                 <!-- Item 1 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Manorama Daily & E Paper</span>
-                    <img src="assets/img/menu/newspaper.webp" alt="Manorama Daily" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span class="font-medium text-xs font-semibold">Manorama
+                        Daily & E Paper</span>
+                    <img src="assets/img/menu/newspaper.webp"
+                        alt="Manorama Daily" class="mx-1" width="40"
+                        height="40">
                 </div>
-        
+
                 <!-- Item 2 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Premium Subscription</span>
-                    <img src="assets/img/menu/premium.webp" alt="Premium Subscription" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span class="font-medium text-xs font-semibold">Premium
+                        Subscription</span>
+                    <img src="assets/img/menu/premium.webp"
+                        alt="Premium Subscription" class="mx-1" width="40"
+                        height="40">
                 </div>
-        
+
                 <!-- Item 3 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Magazines</span>
-                    <img src="assets/img/menu/magazin.webp" alt="Magazines" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span
+                        class="font-medium text-xs font-semibold">Magazines</span>
+                    <img src="assets/img/menu/magazin.webp" alt="Magazines"
+                        class="mx-1" width="40" height="40">
                 </div>
-        
+
                 <!-- Item 4 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Books</span>
-                    <img src="assets/img/menu/book.webp" alt="Books" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span class="font-medium text-xs font-semibold">Books</span>
+                    <img src="assets/img/menu/book.webp" alt="Books"
+                        class="mx-1" width="40" height="40">
                 </div>
-        
+
                 <!-- Item 5 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Year Book</span>
-                    <img src="assets/img/menu/yearbook.webp" alt="Year Book" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span class="font-medium text-xs font-semibold">Year
+                        Book</span>
+                    <img src="assets/img/menu/yearbook.webp" alt="Year Book"
+                        class="mx-1" width="40" height="40">
                 </div>
-        
+
                 <!-- Item 6 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Astro</span>
-                    <img src="assets/img/menu/astro.webp" alt="Astro" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span class="font-medium text-xs font-semibold">Astro</span>
+                    <img src="assets/img/menu/astro.webp" alt="Astro"
+                        class="mx-1" width="40" height="40">
                 </div>
-        
+
                 <!-- Item 7 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold">Manorama Max</span>
-                    <img src="assets/img/menu/max.webp" alt="Manorama Max" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span class="font-medium text-xs font-semibold">Manorama
+                        Max</span>
+                    <img src="assets/img/menu/max.webp" alt="Manorama Max"
+                        class="mx-1" width="40" height="40">
                 </div>
-        
+
                 <!-- Item 8 -->
-                <div class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
-                    <span class="font-medium text-sm font-semibold ">Offers</span>
-                    <img src="assets/img/menu/offe.webp" alt="Offers" class="w-10 ">
+                <div
+                    class="flex items-center justify-between p-3 bg-white shadow-md rounded-lg">
+                    <span
+                        class="font-medium text-xs font-semibold">Offers</span>
+                    <img src="assets/img/menu/offe.webp" alt="Offers"
+                        class="mx-1" width="40" height="40">
                 </div>
             </div>
- 
+
         </div>
-        
+
+        <!-- Horizontal Scrollable Section (Mobile Only) -->
+        <div
+            class="overflow-x-auto whitespace-nowrap px-4 pb-4 space-x-4 flex md:hidden items-start">
+
+            <!-- Icon Item -->
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.205078" y="0.000488281" width="14.1054"
+                            height="14.1054" rx="1" fill="#0074ED"
+                            fill-opacity="0.12" />
+                        <rect x="0.205078" y="16.6685" width="14.1054"
+                            height="14.1054" rx="1" fill="#0074ED" />
+                        <rect x="16.875" y="16.6685" width="14.1054"
+                            height="14.1054" rx="5.5" fill="#0074ED"
+                            fill-opacity="0.12" />
+                        <rect x="16.875" width="14.1054" height="14.1054" rx="1"
+                            fill="#0074ED" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Repeatable Item Template -->
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/newspaper.webp"
+                        alt="Manorama Daily" class="w-full h-full" width="56"
+                        height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Manorama
+                    Daily & E Paper</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/premium.webp"
+                        alt="Premium Subscription" class="w-full h-full"
+                        width="56" height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Premium
+                    Subscription</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/magazin.webp" alt="Magazines"
+                        class="w-full h-full" width="56" height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Magazines</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/book.webp" alt="Books"
+                        class="w-full h-full" width="56" height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Books</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/yearbook.webp" alt="Year Book"
+                        class="w-full h-full" width="56" height="56" />
+                </div>
+                <span class="text-xs mt-1 text-center scroll-menu-txt-wrap">Year
+                    Book</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/astro.webp" alt="Astro"
+                        class="w-full h-full" width="56" height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Astro</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/max.webp" alt="Manorama Max"
+                        class="w-full h-full" width="56" height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Manorama
+                    Max</span>
+            </div>
+
+            <div class="flex flex-col items-center min-w-[70px]">
+                <div
+                    class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="assets/img/menu/offe.webp" alt="Offers"
+                        class="w-full h-full" width="56" height="56" />
+                </div>
+                <span
+                    class="text-xs mt-1 text-center scroll-menu-txt-wrap">Offers</span>
+            </div>
+        </div>
+
         <!-- Hero Section -->
 
         <div
@@ -474,55 +749,41 @@
                                     alt="Slide 1" width="1200" height="600">
                             </div>  -->
                         <!-- Slide 2 -->
-                        <div class="w-full flex-shrink-0" style="min-height: 130px;">
-                      
- 
-
-
-                              
-
-
+                        <div class="w-full flex-shrink-0"
+                            style="min-height: 130px;">
 
                             <img src="assets/img/banner.webp"
                                 alt="Responsive Banner" width="1200"
-                                height="600" 
+                                height="600"
                                 class="w-full h-full object-contain  hidden md:block"
                                 style="min-height: 130px;" decoding="async"
-                                loading="eager"  fetchpriority="high">
-
+                                loading="eager" fetchpriority="high">
 
                             <img src="assets/img/banner-mobile.webp"
                                 alt="Responsive Banner" width="700" height="345"
                                 class="w-full h-full object-contain  block md:hidden"
-                            
                                 decoding="async"
-                                loading="eager"  fetchpriority="high">
-
-                             
-
-
+                                loading="eager" fetchpriority="high">
 
                         </div>
                         <!-- Slide 3 -->
-                        <div class="w-full flex-shrink-0"  style="min-height: 130px;">
-                        
-                          
-                              <img src="assets/img/banner.webp"
-                              alt="Responsive Banner" width="1200"
-                              height="600" 
-                              class="w-full h-full object-contain  hidden md:block"
-                              style="min-height: 130px;" decoding="async"
-                              loading="eager"  fetchpriority="high">
+                        <div class="w-full flex-shrink-0"
+                            style="min-height: 130px;">
 
+                            <img src="assets/img/banner.webp"
+                                alt="Responsive Banner" width="1200"
+                                height="600"
+                                class="w-full h-full object-contain  hidden md:block"
+                                style="min-height: 130px;" decoding="async"
+                                loading="eager" fetchpriority="high">
 
-                          <img src="assets/img/banner-mobile.webp"
-                              alt="Responsive Banner" width="700" height="345"
-                              class="w-full h-full object-contain  block md:hidden"
-                          
-                              decoding="async"
-                              loading="eager"  fetchpriority="high">
+                            <img src="assets/img/banner-mobile.webp"
+                                alt="Responsive Banner" width="700" height="345"
+                                class="w-full h-full object-contain  block md:hidden"
+                                decoding="async"
+                                loading="eager" fetchpriority="high">
 
-                    </div> 
+                        </div>
 
                     </div>
                 </div>
@@ -553,7 +814,7 @@
         </div>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5  px-4 sm:px-6 lg:px-8  ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5  px-4 sm:px-6 lg:px-8  overflow-hidden ">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -584,7 +845,8 @@
                     <div class="bg-white p-2 border rounded-lg hover:shadow-md">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/books/a2.webp" width="266"
-                                height="350" decoding="async" class="transition-all duration-300 hover:scale-110">
+                                height="350" decoding="async"
+                                class="transition-all duration-300 hover:scale-110">
                         </div>
                         <p class="text-xs text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#"
@@ -596,8 +858,9 @@
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
                         <div class="relative overflow-hidden">
-                        <img src="assets/img/books/a4.webp" width="266"
-                            height="350" decoding="async" class="transition-all duration-300 hover:scale-110">
+                            <img src="assets/img/books/a4.webp" width="266"
+                                height="350" decoding="async"
+                                class="transition-all duration-300 hover:scale-110">
                         </div>
                         <p class="text-xs text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#"
@@ -609,9 +872,10 @@
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
                         <div class="relative overflow-hidden">
-                        <img src="assets/img/books/a1.webp" width="266"
-                            height="350" decoding="async" class="transition-all duration-300 hover:scale-110">
-                            </div>
+                            <img src="assets/img/books/a1.webp" width="266"
+                                height="350" decoding="async"
+                                class="transition-all duration-300 hover:scale-110">
+                        </div>
 
                         <p class="text-xs text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#"
@@ -623,9 +887,10 @@
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
                         <div class="relative overflow-hidden">
-                        <img src="assets/img/books/a5.webp" width="266"
-                            height="350" decoding="async" class="transition-all duration-300 hover:scale-110">
-                            </div>
+                            <img src="assets/img/books/a5.webp" width="266"
+                                height="350" decoding="async"
+                                class="transition-all duration-300 hover:scale-110">
+                        </div>
                         <p class="text-xs text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#"
                             class="text-blue-600 text-sm md:text-sm font-semibold mt-2">Continue
@@ -636,9 +901,10 @@
                 <div class="px-2 pb-2">
                     <div class="bg-white p-2 border rounded-lg">
                         <div class="relative overflow-hidden">
-                        <img src="assets/img/books/a3.webp" width="266"
-                            height="350" decoding="async" class="transition-all duration-300 hover:scale-110">
-                            </div>
+                            <img src="assets/img/books/a3.webp" width="266"
+                                height="350" decoding="async"
+                                class="transition-all duration-300 hover:scale-110">
+                        </div>
                         <p class="text-xs text-gray-500 mt-2">1 Day Ago</p>
                         <a href="#"
                             class="text-blue-600 text-sm md:text-sm font-semibold mt-2">Continue
@@ -650,7 +916,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 section-height ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 section-height overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -682,7 +948,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/subscription/1.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -717,7 +985,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/subscription/2.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -753,7 +1023,9 @@
                     <div class="bg-white p-2 rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/subscription/3.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -919,7 +1191,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/subscription/4.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -1086,7 +1360,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/subscription/1.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -1254,7 +1530,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -1271,7 +1547,8 @@
                         <div class="relative overflow-hidden">
                             <img src="assets/img/epaper%26news/a1.webp"
                                 alt="Malayala Manorama Daily"
-                                class="w-34 h-38 rounded-md transition-all duration-300 hover:scale-110" width="150"
+                                class="w-34 h-38 rounded-md transition-all duration-300 hover:scale-110"
+                                width="150"
                                 height="100">
                             <div class="absolute bottom-2 left-0  right-0">
                                 <!-- <div class="right-2 text-white text-xs px-2 py-1 rounded-full offer-circle-badge mb-2 font-semibold">30% OFF</div> -->
@@ -1440,10 +1717,12 @@
                 <!-- Malayala Manorama E-Paper -->
                 <div
                     class="border rounded-lg p-4 flex items-center justify-between">
-                    <div class="flex items-center space-x-4 relative overflow-hidden">
+                    <div
+                        class="flex items-center space-x-4 relative overflow-hidden">
                         <img src="assets/img/epaper%26news/5.webp"
                             alt="Malayala Manorama E-Paper"
-                            class="w-34 h-38  rounded-md transition-all duration-300 hover:scale-110" width="150"
+                            class="w-34 h-38  rounded-md transition-all duration-300 hover:scale-110"
+                            width="150"
                             height="100" decoding="async">
                         <div>
                             <h3
@@ -1474,7 +1753,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 section-height ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 section-height overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -1506,7 +1785,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/books/a1.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <span
@@ -1677,7 +1957,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/books/a2.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <span
@@ -1717,7 +1998,8 @@
                     <div class="bg-white p-2 rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/books/a3.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <span
@@ -1753,7 +2035,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/books/a4.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <span
@@ -1793,7 +2076,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/books/a5.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <span
@@ -1836,7 +2120,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -1868,7 +2152,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/magazin/1.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -1909,7 +2195,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/magazin/2.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -1946,7 +2234,9 @@
                     <div class="bg-white p-2 rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/magazin/3.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -1980,7 +2270,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/magazin/4.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -2019,7 +2311,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/magazin/5.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <span
@@ -2058,7 +2352,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -2107,7 +2401,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -2139,7 +2433,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/astro/1.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <button
@@ -2171,7 +2466,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/astro/2.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <button
@@ -2205,7 +2501,8 @@
                     <div class="bg-white p-2 rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/astro/3.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <button
@@ -2235,7 +2532,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/astro/3.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <button
@@ -2266,7 +2564,8 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/astro/4.webp" alt="Magazine 1"
-                                class="rounded-md transition-all duration-300 hover:scale-110" width="266" height="350"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266" height="350"
                                 decoding="async">
 
                             <button
@@ -2304,7 +2603,7 @@
         </section>
 
         <section
-            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 ">
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-[16px] md:text-[18px] 
@@ -2336,7 +2635,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/yearbook/1.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <button
@@ -2367,7 +2668,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/yearbook/2.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <button
@@ -2401,7 +2704,9 @@
                     <div class="bg-white p-2 rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/yearbook/3.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <button
@@ -2431,7 +2736,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/yearbook/4.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <button
@@ -2461,7 +2768,9 @@
                     <div class="bg-white p-2  rounded-lg border">
                         <div class="relative overflow-hidden">
                             <img src="assets/img/yearbook/1.webp"
-                                alt="Magazine 1" class="rounded-md transition-all duration-300 hover:scale-110" width="266"
+                                alt="Magazine 1"
+                                class="rounded-md transition-all duration-300 hover:scale-110"
+                                width="266"
                                 height="350" decoding="async">
 
                             <button
@@ -2497,42 +2806,55 @@
             </div>
         </section>
 
-
-
-        <div class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8">
+        <div
+            class="max-w-full lg:max-w-[1550px] mx-auto px-4 my-6 border-b-2  border-b-gray-100 pb-5 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="assets/img/ad/1.webp" alt="Manorama Horizon" class="w-full transition-all duration-300 hover:scale-110" width="395"
-                    height="348" decoding="async">
+                    <img src="assets/img/ad/1.webp" alt="Manorama Horizon"
+                        class="w-full transition-all duration-300 hover:scale-110"
+                        width="395"
+                        height="348" decoding="async">
                     <div class="p-4">
-                        <h3 class="text-sm md:text-sm font-semibold mt-2">Visit Manorama Horizon Website</h3>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm md:text-sm ">Enroll Today</a>
+                        <h3 class="text-sm md:text-sm font-semibold mt-2">Visit
+                            Manorama Horizon Website</h3>
+                        <a href="#"
+                            class="text-blue-600 font-medium hover:underline text-sm md:text-sm ">Enroll
+                            Today</a>
                     </div>
                 </div>
-        
+
                 <!-- Card 2 -->
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="assets/img/ad/2.webp" alt="Quick Kerala" class="w-full transition-all duration-300 hover:scale-110"  class="w-full" width="395"
-                    height="348" decoding="async">
+                    <img src="assets/img/ad/2.webp" alt="Quick Kerala"
+                        class="w-full transition-all duration-300 hover:scale-110"
+                        class="w-full" width="395"
+                        height="348" decoding="async">
                     <div class="p-4">
-                        <h3 class="text-sm md:text-sm font-semibold mt-2">Event Booking Facility Live</h3>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm md:text-sm ">Visit Website</a>
+                        <h3 class="text-sm md:text-sm font-semibold mt-2">Event
+                            Booking Facility Live</h3>
+                        <a href="#"
+                            class="text-blue-600 font-medium hover:underline text-sm md:text-sm ">Visit
+                            Website</a>
                     </div>
                 </div>
-        
+
                 <!-- Card 3 -->
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="assets/img/ad/3.webp" alt="M4Marry" class="w-full transition-all duration-300 hover:scale-110"  class="w-full" width="395"
-                    height="348" decoding="async">
+                    <img src="assets/img/ad/3.webp" alt="M4Marry"
+                        class="w-full transition-all duration-300 hover:scale-110"
+                        class="w-full" width="395"
+                        height="348" decoding="async">
                     <div class="p-4">
-                        <h3 class="text-sm md:text-sm font-semibold mt-2">Find Special Moment at M4Marry.com</h3>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm md:text-sm ">Register Now</a>
+                        <h3 class="text-sm md:text-sm font-semibold mt-2">Find
+                            Special Moment at M4Marry.com</h3>
+                        <a href="#"
+                            class="text-blue-600 font-medium hover:underline text-sm md:text-sm ">Register
+                            Now</a>
                     </div>
                 </div>
             </div>
         </div>
-        
 
         <link rel="stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"

@@ -225,6 +225,14 @@ body {
   }
   }
 
+.scroll-menu-txt-wrap
+{
+  width: auto;
+  display: block;
+  text-wrap: wrap;
+}
+
+
 /* Hide all slides except the first before Slick initializes */
 /* .slick-slider>div:not(:first-child) {
     display: none;
