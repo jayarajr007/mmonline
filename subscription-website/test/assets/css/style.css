@@ -203,11 +203,17 @@ body {
 }
 
 
-
+/* 
 .section-height
 {
   min-height: 390px;
+} */
+
+.section-height
+{
+  min-height: 323px;
 }
+
 
 @media screen and (max-width: 1279px) {
   .section-height
