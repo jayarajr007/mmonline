@@ -214,6 +214,14 @@ body {
   min-height: 323px;
 }
 
+/* Hide scrollbar */
+/* .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
 
 @media screen and (max-width: 1279px) {
   .section-height
