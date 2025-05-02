@@ -81,7 +81,7 @@
 
         <!-- Navbar -->
         <!-- Header -->
-        <header class="bg-white  z-40 relative sticky top-0 ">
+        <header class="bg-white  z-40  sticky w-full top-0 ">
             <div
                 class="max-w-full lg:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div
@@ -666,7 +666,7 @@
                 </a>
 
                 <a href="#"
-                    class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+                    class="flex flex-col items-center text-gray-600 hover:text-blue-600" onclick="showCategory()">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -693,6 +693,92 @@
 
             </div>
         </nav>
+
+        <div id="categoryMenu" class="flex flex-1 hidden">
+            <div class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-4 py-3 shadow-md z-50">
+                <button class="text-2xl">
+                  ✖
+                </button>
+                <h1 class="text-lg font-semibold">CATEGORIES</h1>
+                <div class="w-6"></div> <!-- Empty div to balance the space for the 'X' button -->
+              </div>
+    
+            <!-- Sidebar Tabs -->
+
+     
+            <div class="w-20 bg-white border-r flex flex-col items-center py-3 space-y-4 overflow-y-auto">
+              <button onclick="showTab('premium')" class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="https://via.placeholder.com/40" alt="Premium" class="rounded-full">
+                </div>
+                <span class="text-[10px] text-center">Premium</span>
+              </button>
+        
+              <button onclick="showTab('magazines')" class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="https://via.placeholder.com/40" alt="Magazines" class="rounded-full">
+                </div>
+                <span class="text-[10px] text-center">Magazines</span>
+              </button>
+        
+              <button onclick="showTab('books')" class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="https://via.placeholder.com/40" alt="Books" class="rounded-full">
+                </div>
+                <span class="text-[10px] text-center">Books</span>
+              </button>
+            </div>
+        
+            <!-- Content Area -->
+            <div class="flex-1 p-4 overflow-y-auto">
+              <h1 class="text-center font-semibold text-gray-700 mb-4">Categories</h1>
+        
+              <!-- Premium Content -->
+              <div id="premium" class="tab-content">
+                <div class="space-y-6">
+                  <div class="text-center">
+                    <img src="https://via.placeholder.com/100" class="mx-auto mb-2" alt="Premium">
+                    <p class="text-sm font-medium">Premium Subscription</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="https://via.placeholder.com/100" class="mx-auto mb-2" alt="Premium + Epaper">
+                    <p class="text-sm font-medium">Premium + Epaper Subscription</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="https://via.placeholder.com/100" class="mx-auto mb-2" alt="Premium + Max">
+                    <p class="text-sm font-medium">Premium + Manorama Max Subscription</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Magazines Content -->
+              <div id="magazines" class="tab-content hidden">
+                <h2 class="font-semibold text-gray-700 mb-2">English - Magazines</h2>
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="text-center">
+                    <img src="https://via.placeholder.com/80" class="mx-auto" alt="The Week">
+                    <p class="text-[10px] mt-1">The Week</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="https://via.placeholder.com/80" class="mx-auto" alt="Magic Pot">
+                    <p class="text-[10px] mt-1">Magic Pot</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="https://via.placeholder.com/80" class="mx-auto" alt="Tell Me Why">
+                    <p class="text-[10px] mt-1">Tell Me Why</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Books Content -->
+              <div id="books" class="tab-content hidden">
+                <h2 class="font-semibold text-gray-700 mb-2">Books</h2>
+                <p class="text-sm text-gray-600">Coming soon...</p>
+              </div>
+        
+            </div>
+  
+          </div>
 
         <div class="container mx-auto px-4 py-6 md:hidden">
             <h2 class="text-xl font-normal">Welcome</h2>
@@ -3498,23 +3584,7 @@
 
                 <!-- Newsletter -->
                 <div>
-                    <h3 class="font-semibold text-md mb-4">Newsletter</h3>
-                    <p class="text-sm mb-2">Subscribe Now To Get Our
-                        Newsletters</p>
-                    <form class="w-full max-w-md">
-                        <div
-                            class="flex items-center rounded-full border border-gray-300 overflow-hidden bg-white w-full">
-                            <input
-                                type="email"
-                                placeholder="Your Email Address"
-                                class="flex-1 min-w-0 px-4 py-3 text-sm outline-none bg-transparent placeholder-gray-500" />
-                            <button
-                                type="submit"
-                                class="px-4 py-3 text-sm font-semibold text-black bg-gray-300 hover:bg-gray-400 transition whitespace-nowrap">
-                                SUBSCRIBE
-                            </button>
-                        </div>
-                    </form>
+            
 
                     <h3 class="font-semibold text-sm mb-2 mt-2">Social
                         Networks</h3>
@@ -3538,8 +3608,7 @@
                 <p>Copyright 2023 Manorama Online &nbsp;|&nbsp; All Rights
                     Reserved</p>
                 <div class="flex space-x-2 mt-4 md:mt-0">
-                    <img src="assets/img/icons/payment.svg" class alt="Visa" />
-
+                   
                 </div>
             </div>
         </footer>
@@ -3670,8 +3739,31 @@ variableWidth: false, // Ensure uniform width
       filled.classList.toggle('hidden');
     }
   </script>
+
+
+<script>
+    function showCategory() {
+      document.getElementById('categoryMenu').classList.remove('hidden');
+      document.getElementById('mainContent').classList.add('hidden');
+    }
+  
+    function showMain(page) {
+      document.getElementById('categoryMenu').classList.add('hidden');
+      document.getElementById('mainContent').classList.remove('hidden');
+      
+      // Optional: Change main content title if needed
+      document.getElementById('mainContent').innerHTML = `<h1 class="text-2xl font-bold text-gray-700">${page.charAt(0).toUpperCase() + page.slice(1)} Content</h1>`;
+    }
+  
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+  </script>
+
     </body>
 
-    <!-- Mirrored from jayarajr007.github.io/mmonline/subscription-website/test.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 17:51:36 GMT -->
+ 
 
 </html>

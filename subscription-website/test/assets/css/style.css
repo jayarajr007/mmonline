@@ -223,6 +223,15 @@ body {
   scrollbar-width: none;
 } */
 
+#categoryMenu
+{
+  position: fixed;
+  background: #fff;
+  height: 100%;
+  z-index: 48;
+}
+
+
 @media screen and (max-width: 1279px) {
   .section-height
   {
