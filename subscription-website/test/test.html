@@ -56,7 +56,12 @@
   background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-        
+.active-tab {
+    background-color: #1d4ed8;
+    border-left: 3px solid #1d4ed8;
+    color: #fff;
+    padding: 8px;
+}
         </style>
         <link rel="stylesheet" href="assets/css/style.css">
 
@@ -694,88 +699,423 @@
             </div>
         </nav>
 
-        <div id="categoryMenu" class="flex flex-1 hidden">
-            <div class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-4 py-3 shadow-md z-50">
-                <button class="text-2xl">
+        <div id="categoryMenu" class="flex flex-1 hidden w-full ">
+            <div class="fixed top-0 left-0 w-full bg-white flex items-center justify-between px-4 py-5 shadow-md z-50">
+                <button class="text-1xl" id="category-close">
                   ✖
                 </button>
-                <h1 class="text-lg font-semibold">CATEGORIES</h1>
+                <h1 class="text-sm font-normal">CATEGORIES</h1>
                 <div class="w-6"></div> <!-- Empty div to balance the space for the 'X' button -->
               </div>
     
             <!-- Sidebar Tabs -->
 
      
-            <div class="w-20 bg-white border-r flex flex-col items-center py-3 space-y-4 overflow-y-auto">
-              <button onclick="showTab('premium')" class="flex flex-col items-center">
+            <div class="w-20 bg-[#F1F8FF] border-r flex flex-col items-center py-0 space-y-4 overflow-y-auto h-[calc(100vh-121px)] overflow-auto" >
+              <button onclick="showTab('newspaper', this)" id="tab-newspaper" class="flex flex-col items-center tab-btn active-tab w-full p-2">
                 <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                  <img src="https://via.placeholder.com/40" alt="Premium" class="rounded-full">
+                  <img src="assets/img/menu/newspaper.webp" alt="Premium" class="rounded-full w-10 h-10">
                 </div>
-                <span class="text-[10px] text-center">Premium</span>
+                <span class="text-[10px] text-center">News Paper & E Paper</span>
               </button>
         
-              <button onclick="showTab('magazines')" class="flex flex-col items-center">
+              <button onclick="showTab('premium', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
                 <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                  <img src="https://via.placeholder.com/40" alt="Magazines" class="rounded-full">
+                  <img src="assets/img/menu/premium.webp" alt="Magazines" class="rounded-full w-10 h-10">
                 </div>
-                <span class="text-[10px] text-center">Magazines</span>
+                <span class="text-[10px] text-center">Premium 
+                    Subscription</span>
               </button>
         
-              <button onclick="showTab('books')" class="flex flex-col items-center">
+
+              <button onclick="showTab('magazines', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
                 <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
-                  <img src="https://via.placeholder.com/40" alt="Books" class="rounded-full">
+                  <img src="assets/img/menu/magazin.webp" alt="Magazines" class="rounded-full w-10 h-10">
                 </div>
-                <span class="text-[10px] text-center">Books</span>
+                <span class="text-[10px] text-center">Magazines 
+                    Subscription</span>
               </button>
+
+        
+              <button onclick="showTab('books', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="assets/img/menu/book.webp" alt="Magazines" class="rounded-full w-10 h-10">
+                </div>
+                <span class="text-[10px] text-center">Books 
+                    </span>
+              </button>
+              <button onclick="showTab('yearbook', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="assets/img/menu/yearbook.webp" alt="Magazines" class="rounded-full w-10 h-10">
+                </div>
+                <span class="text-[10px] text-center">Year Book 
+                    </span>
+              </button>
+
+
+              <button onclick="showTab('astro', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="assets/img/menu/astro.webp" alt="Magazines" class="rounded-full w-10 h-10">
+                </div>
+                <span class="text-[10px] text-center">Astro
+                    </span>
+              </button>
+
+
+              <button onclick="showTab('apps', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="assets/img/menu/max.webp" alt="Magazines" class="rounded-full w-10 h-10">
+                </div>
+                <span class="text-[10px] text-center">Apps
+                    </span>
+              </button>
+
+              
+
+              <button onclick="showTab('apps', this)" id="tab-premium"  class="flex flex-col items-center tab-btn w-full p-2">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-1">
+                  <img src="assets/img/menu/offe.webp" alt="Magazines" class="rounded-full w-10 h-10">
+                </div>
+                <span class="text-[10px] text-center">Apps
+                    </span>
+              </button>
+
             </div>
         
             <!-- Content Area -->
             <div class="flex-1 p-4 overflow-y-auto">
-              <h1 class="text-center font-semibold text-gray-700 mb-4">Categories</h1>
-        
+            
               <!-- Premium Content -->
-              <div id="premium" class="tab-content">
+              <div id="newspaper" class="tab-content">
                 <div class="space-y-6">
-                  <div class="text-center">
-                    <img src="https://via.placeholder.com/100" class="mx-auto mb-2" alt="Premium">
+                  <div class="text-center border-b  pb-3">
+                    <img src="assets/img/epaper%26news/5.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium">
                     <p class="text-sm font-medium">Premium Subscription</p>
                   </div>
-                  <div class="text-center">
-                    <img src="https://via.placeholder.com/100" class="mx-auto mb-2" alt="Premium + Epaper">
+                  <div class="text-center border-b pb-3">
+                    <img src="assets/img/epaper%26news/a1.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper">
                     <p class="text-sm font-medium">Premium + Epaper Subscription</p>
                   </div>
-                  <div class="text-center">
-                    <img src="https://via.placeholder.com/100" class="mx-auto mb-2" alt="Premium + Max">
-                    <p class="text-sm font-medium">Premium + Manorama Max Subscription</p>
-                  </div>
+                
                 </div>
               </div>
         
               <!-- Magazines Content -->
-              <div id="magazines" class="tab-content hidden">
-                <h2 class="font-semibold text-gray-700 mb-2">English - Magazines</h2>
-                <div class="grid grid-cols-3 gap-4">
-                  <div class="text-center">
-                    <img src="https://via.placeholder.com/80" class="mx-auto" alt="The Week">
-                    <p class="text-[10px] mt-1">The Week</p>
+              <div id="premium" class="tab-content hidden">
+              
+                <div class="space-y-6 pb-[100px]">
+                    <div class="text-center border-b  pb-3">
+                      <img src="assets/img/subscription/3.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium">
+                      <p class="text-sm font-medium">Premium Subscription</p>
+                    </div>
+                    <div class="text-center border-b pb-3">
+                      <img src="assets/img/subscription/2.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper">
+                      <p class="text-sm font-medium">Premium + Manorama MAX</p>
+                    </div>
+                    <div class="text-center border-b pb-3">
+                        <img src="assets/img/subscription/1.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper">
+                        <p class="text-sm font-medium">Premium + Epaper </p>
+                      </div>
+                      <div class="text-center border-b pb-3">
+                        <img src="assets/img/subscription/4.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper">
+                        <p class="text-sm font-medium">Premium + Yearbook</p>
+                      </div>
                   </div>
-                  <div class="text-center">
-                    <img src="https://via.placeholder.com/80" class="mx-auto" alt="Magic Pot">
-                    <p class="text-[10px] mt-1">Magic Pot</p>
-                  </div>
-                  <div class="text-center">
-                    <img src="https://via.placeholder.com/80" class="mx-auto" alt="Tell Me Why">
-                    <p class="text-[10px] mt-1">Tell Me Why</p>
-                  </div>
-                </div>
               </div>
         
               <!-- Books Content -->
-              <div id="books" class="tab-content hidden">
-                <h2 class="font-semibold text-gray-700 mb-2">Books</h2>
-                <p class="text-sm text-gray-600">Coming soon...</p>
+              <div id="magazines" class="tab-content hidden pb-[100px]">
+                <h2 class="font-semibold text-gray-700 text-sm font-medium mb-2">English-Magazine</h2>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div class="text-center">
+                      <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                      <p class="text-[12px] mt-1 font-medium">The Week</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                      <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                      <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                  
+                  </div>
+                  <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View All</a>
+
+                  <h2 class="text-sm font-medium mb-4">News and Information
+                </h2>
+                  <div class="grid grid-cols-3 gap-4 mb-2">
+                      <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                      <div class="text-center">
+                          <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                          <p class="text-[12px] mt-1 font-medium">The Week</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                          <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                          <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                        </div>
+                    </div>
+                    <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View All</a>
+
+
+                    
+                  <h2 class="text-sm font-medium mb-4">Children
+                </h2>
+                  <div class="grid grid-cols-3 gap-4 mb-2">
+                      <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                      <div class="text-center">
+                          <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                          <p class="text-[12px] mt-1 font-medium">The Week</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                          <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                          <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                        </div>
+
+                        
+                    </div>
+                    <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View All</a>
               </div>
+
+
+              <div id="books" class="tab-content hidden pb-[100px]">
+                <h2 class="font-semibold text-gray-700 text-sm font-medium mb-2">General Calendar Diary</h2>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div class="text-center">
+                      <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                      <p class="text-[12px] mt-1 font-medium">The Week</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                      <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                      <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                  
+                  </div>
+                  <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View All</a>
+
+                  <h2 class="text-sm font-medium mb-4">Education and Career
+                </h2>
+                  <div class="grid grid-cols-3 gap-4 mb-2">
+                      <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                      <div class="text-center">
+                          <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                          <p class="text-[12px] mt-1 font-medium">The Week</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                          <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                          <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                        </div>
+                    </div>
+                    <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View All</a>
+
+
+                    
+                  <h2 class="text-sm font-medium mb-4">Agriculture
+                </h2>
+                  <div class="grid grid-cols-3 gap-4 mb-2">
+                      <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                      <div class="text-center">
+                          <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                          <p class="text-[12px] mt-1 font-medium">The Week</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                          <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                        </div>
+                        <div class="text-center">
+                          <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                          <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                        </div>
+
+                        
+                    </div>
+                    <a href="#" class="block text-right mb-2 text-xs mt-1 font-medium text-blue-500">View All</a>
+              </div>
+
+
+              <div id="yearbook" class="tab-content hidden pb-[100px]">
+                <h2 class="font-semibold text-gray-700 text-sm font-medium mb-2">Year Book</h2>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div class="text-center">
+                      <img src="assets/img/yearbook/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                      <p class="text-[12px] mt-1 font-medium">The Week</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/yearbook/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                      <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/yearbook/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                      <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/img/yearbook/4.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium">The Week</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/yearbook/3.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                     
+                  
+                  </div>
+              
+
+                  <h2 class="text-sm font-medium mb-4">Year Book Mock Test
+                </h2>
+                  <div class="grid grid-cols-3 gap-4 mb-2">
+                      <div class="text-center">
+                        <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                        <p class="text-[12px] mt-1 font-medium line-clamp-2">all india current affairs test series 2025</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/2.webp" class="mx-auto rounded-sm" alt="Magic Pot">
+                        <p class="text-[12px] mt-1 font-medium">Magic Pot</p>
+                      </div>
+                      <div class="text-center">
+                        <img src="assets/img/magazin/3.webp" class="mx-auto rounded-sm" alt="Tell Me Why">
+                        <p class="text-[12px] mt-1 font-medium">Tell Me Why</p>
+                      </div>
+                      <div class="text-center">
+                          <img src="assets/img/magazin/1.webp" class="mx-auto rounded-sm" alt="The Week">
+                          <p class="text-[12px] mt-1 font-medium">The Week</p>
+                        </div>
+                   
+                    </div>
+               
+
+
+                    
+              
+              </div>
+
+              <div id="astro" class="tab-content pb-[100px]">
+                <div class="space-y-6">
+                  <div class="text-center border-b  pb-3">
+                    <img src="assets/img/astro/1.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium">
+                    <p class="text-sm font-medium">In-depth
+                        horoscope
+                    </p>
+                  </div>
+                  <div class="text-center border-b pb-3">
+                    <img src="assets/img/astro/2.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper">
+                    <p class="text-sm font-medium">Gem Recommendation
+                    </p>
+                  </div>
+                  <div class="text-center border-b  pb-3">
+                    <img src="assets/img/astro/3.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium">
+                    <p class="text-sm font-medium">Yoga Report
+                        
+                    
+                    </p>
+                  </div>
+                  <div class="text-center border-b pb-3">
+                    <img src="assets/img/astro/2.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium + Epaper">
+                    <p class="text-sm font-medium">Gem Recommendation
+                    </p>
+                  </div>
+                
+                </div>
+              </div>
+
+              
         
+              <div id="apps" class="tab-content pb-[100px]">
+                <div class="space-y-6">
+                  <div class="text-center border-b  pb-3">
+                    <img src="assets/img/subscription/2.webp" class="mx-auto mb-2 max-w-[115px] rounded-md border border-gray-300" alt="Premium">
+                    <p class="text-sm font-medium">Manorama MAX
+                    </p>
+                  </div>
+              
+                
+                </div>
+              </div>
             </div>
   
           </div>
@@ -3755,13 +4095,45 @@ variableWidth: false, // Ensure uniform width
       document.getElementById('mainContent').innerHTML = `<h1 class="text-2xl font-bold text-gray-700">${page.charAt(0).toUpperCase() + page.slice(1)} Content</h1>`;
     }
   
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.add('hidden'));
-      document.getElementById(tabId).classList.remove('hidden');
-    }
-  </script>
+    // function showTab(tabId) {
+    //   const tabs = document.querySelectorAll('.tab-content');
+    //   tabs.forEach(tab => tab.classList.add('hidden'));
+    //   document.getElementById(tabId).classList.remove('hidden');
+    // }
 
+
+    function showTab(tabId, element) {
+  // Hide all tab contents
+  const tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(tab => tab.classList.add('hidden'));
+
+  // Show selected tab content
+  const selectedTab = document.getElementById(tabId);
+  if (selectedTab) {
+    selectedTab.classList.remove('hidden');
+  }
+
+  // Remove active class from all buttons
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.classList.remove('active-tab'));
+
+  // Add active class to clicked button
+  if (element) {
+    element.classList.add('active-tab');
+  }
+}
+
+window.onload = function () {
+  const firstTabButton = document.querySelector('.tab-btn');
+  if (firstTabButton) {
+    firstTabButton.click();
+  }
+};
+
+
+
+  </script>
+<script> document.getElementById('category-close').addEventListener('click', function () { document.getElementById('categoryMenu').classList.add('hidden'); }); </script>
     </body>
 
  
