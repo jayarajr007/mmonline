@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Mirrored from jayarajr007.github.io/mmonline/subscription-website/test.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 17:51:30 GMT -->
-    <!-- Added by HTTrack -->
+
     <meta http-equiv="content-type"
-        content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+        content="text/html;charset=utf-8" />
+        <meta name="description"
+        content="Manorama Subscription Website. Subscribe Books and Magazines. Manorama Year Book Malayalam and English. Magic Pot. The Week. Watch Time India. Sampadyam. Bhashaposhini. Karshakasree. Smart Life. The Man. Balarama Digest. Tell Me Why. Kalikkudukka. Balarama. Vanitha. National Geographic Kids. Manorama Weekly. Vanitha Pachakam. Thozhilveedhi. Balarama Amar Chithra Kadha.">
+    <title>Manorama Subscription | Books | E-editions</title>
+
 
     <head>
         <meta charset="UTF-8">
@@ -325,13 +328,62 @@
                     </button>
                   
                     <!-- Filter Button -->
-                    <button class="flex items-center text-gray-700 text-sm font-medium space-x-1">
+                    <button class="flex items-center text-gray-700 text-sm font-medium space-x-1" id="openFilter">
                         <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.98125 9V7.77273H9.01015V9H5.98125ZM2.56235 5.11364V3.88636H12.4293V5.11364H2.56235ZM0 1.22727V0H15V1.22727H0Z" fill="#5F6368"/>
                             </svg>
                             
                       <span>Filter</span>
                     </button>
+
+
+
+  <!-- Filter Sidebar -->
+  <div id="filterPanel" class="fixed inset-0 bg-black bg-opacity-40 z-50 hidden">
+    <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-xl p-4 max-h-[80vh] flex flex-col inline-table">
+      
+      <!-- Header -->
+      <div class="flex justify-between items-center border-b pb-2">
+        <h2 class="font-bold text-lg">FILTERS</h2>
+        <button id="closeFilter" class="text-gray-500">&times;</button>
+      </div>
+
+      <!-- Body -->
+      <div class="flex flex-1  overflow-y-auto min-h-[calc(100vh-200px)] ">
+        <!-- Tabs -->
+        <div class="w-1/3 border-r">
+          <button class="tab-btn w-full text-left px-4 py-2 hover:bg-gray-100" data-tab="categories">Categories</button>
+          <button class="tab-btn w-full text-left px-4 py-2 hover:bg-gray-100" data-tab="author">Author</button>
+          <button class="tab-btn w-full text-left px-4 py-2 hover:bg-gray-100" data-tab="format">Format Type</button>
+          <button class="tab-btn w-full text-left px-4 py-2 hover:bg-gray-100" data-tab="language">Language</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="w-2/3 p-4">
+          <div id="categories" class="tab-content">  <label class="block mb-2"><input type="checkbox" class="mr-2">News And Information</label>
+            <label class="block mb-2"><input type="checkbox" class="mr-2">Children</label>
+            <label class="block mb-2"><input type="checkbox" class="mr-2">Women</label>
+            <label class="block mb-2"><input type="checkbox" class="mr-2">Career And General</label>
+            <label class="block mb-2"><input type="checkbox" class="mr-2">Health</label>
+            <label class="block mb-2"><input type="checkbox" class="mr-2">Travel</label></div>
+          <div id="author" class="tab-content hidden">Author filter options go here...</div>
+          <div id="format" class="tab-content hidden">Format Type filter options go here...</div>
+          <div id="language" class="tab-content hidden">Language filter options go here...</div>
+        </div>
+      </div>
+
+      <!-- Bottom Action Buttons -->
+      <div class="flex justify-between pt-4 border-t">
+        <span class="text-sm text-gray-500">1000+ Products</span>
+        <div>
+          <button id="clearFilters" class="text-blue-600 mr-4">Clear</button>
+          <button id="applyFilters" class="bg-blue-600 text-white px-4 py-2 rounded">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
                   </div>
                   
 
@@ -598,7 +650,7 @@
         <!-- Bottom Navigation - Mobile Only -->
         <nav
             class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 md:hidden shadow-md">
-            <div class="flex justify-between px-4 py-2 text-xs text-center">
+            <div class="flex justify-between px-4 py-2 text-xs text-center" id="bottom-nav">
 
                 <a href="#" class="flex flex-col items-center text-red-600">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -2348,6 +2400,11 @@
             </div>
         </footer>
 
+
+
+ 
+        
+
         <link rel="stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
             media="print"
@@ -2360,6 +2417,63 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+
+
+ <!-- Script for toggle -->
+    <!-- jQuery Logic -->
+    <script>
+        $(document).ready(function () {
+          // Open panel
+          $("#openFilter").click(function () {
+  
+            $("#filterPanel").removeClass("hidden");
+
+            $("#categories").removeClass("hidden");
+
+            $("#bottom-nav").hide();
+         
+
+
+            
+          });
+    
+          // Close panel
+          $("#closeFilter").click(function () {
+            $("#filterPanel").addClass("hidden");
+            $("#bottom-nav").show();
+          });
+    
+          // Tab switch logic
+          $(".tab-btn").on("click", function () {
+            var tab = $(this).data("tab");
+    
+            // Switch content
+            $(".tab-content").addClass("hidden");
+            $("#" + tab).removeClass("hidden");
+    
+            // Style active tab
+            $(".tab-btn").removeClass("border-l-2 font-semibold border-blue-600 bg-white text-black");
+            $(this).addClass("border-l-2 font-semibold border-blue-600 bg-white text-black");
+          });
+    
+          // Clear button
+          $("#clearFilters").click(function () {
+            alert("Filters cleared!");
+            // add actual logic to reset filters if needed
+          });
+    
+          // Done button
+          $("#applyFilters").click(function () {
+            $("#filterPanel").addClass("hidden");
+            alert("Filters applied!");
+            // add actual logic to apply filters if needed
+          });
+        });
+      </script>
+
+
 
         <script>
         document.getElementById("menu-toggle").addEventListener("click", function () {
@@ -2492,5 +2606,16 @@ window.onload = function () {
   });
 });
   </script>
+
+
+
+
+
+
+
+
+
+
+
 
 </html>
